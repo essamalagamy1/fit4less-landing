@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="فت فور لس – أسلوبك الصحي بطريقة مختلفة. وجبات صحية لذيذة واشتراكات غذائية مرنة في الرياض." />
+  <title>فت فور لس | Fit4Less – أسلوبك الصحي بطريقة مختلفة</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+ <!-- icon -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" type="image/png" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css?v=1.4" />
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#49973F',
+              dark:    '#3A7832',
+              light:   '#5DB84E',
+              pale:    '#E8F5E6',
+            },
+            accent: { DEFAULT: '#F59E0B', dark: '#D97706' },
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            latin:  ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-arabic antialiased bg-white text-gray-900">
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header id="navbar" class="fixed top-0 right-0 left-0 z-50 transition-all duration-300">
+  <div class="container-custom">
+    <div class="flex items-center justify-between h-16 lg:h-18">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 flex-shrink-0" aria-label="الصفحة الرئيسية فت فور لس">
+        <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-10 sm:h-11 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="#menu"          class="nav-link text-white/80 text-sm font-medium" data-section="menu">المنيو</a>
+        <a href="#subscriptions" class="nav-link text-white/80 text-sm font-medium" data-section="subscriptions">الاشتراكات</a>
+        <a href="#locations"     class="nav-link text-white/80 text-sm font-medium" data-section="locations">فروعنا</a>
+        <a href="#story"         class="nav-link text-white/80 text-sm font-medium" data-section="story">قصتنا</a>
+        <a href="#app"           class="nav-link text-white/80 text-sm font-medium" data-section="app">التطبيق</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+           class="btn-primary text-sm py-2.5 px-5 hidden sm:inline-flex">
+          اطلب الآن
+        </a>
+        <button id="menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 transition-colors cursor-pointer" aria-label="فتح القائمة">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6"  x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-lg flex-col">
+  <div class="flex items-center justify-between px-6 h-18">
+    <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-10 w-auto object-contain" />
+    <button id="menu-close" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 cursor-pointer" aria-label="إغلاق القائمة">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-2 px-6 pt-8">
+    <a href="#menu"          class="text-white text-xl font-semibold py-4 border-b border-white/10">المنيو</a>
+    <a href="#subscriptions" class="text-white text-xl font-semibold py-4 border-b border-white/10">الاشتراكات</a>
+    <a href="#locations"     class="text-white text-xl font-semibold py-4 border-b border-white/10">فروعنا</a>
+    <a href="#story"         class="text-white text-xl font-semibold py-4 border-b border-white/10">قصتنا</a>
+    <a href="#app"           class="text-white text-xl font-semibold py-4 border-b border-white/10">التطبيق</a>
+    <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+       class="btn-primary mt-6 text-center text-lg py-4">
+      اطلب الآن
+    </a>
+  </nav>
+</div>
+
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero" class="relative min-h-screen flex items-center pt-16">
+
+  <!-- Decorative floating shapes -->
+  <div class="hero-shape w-96 h-96" style="top:-80px;right:-60px;"></div>
+  <div class="hero-shape w-64 h-64" style="bottom:80px;left:-40px;"></div>
+  <div class="hero-shape w-48 h-48" style="top:40%;left:30%;"></div>
+
+  <!-- Grid pattern overlay -->
+  <div class="absolute inset-0 opacity-5" style="background-image:linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);background-size:48px 48px;"></div>
+
+  <div class="container-custom relative z-10 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+      <!-- Right Column: Text & CTAs & Stats -->
+      <div class="lg:col-span-7">
+
+        <!-- Location Tag -->
+        <!-- <div class="inline-flex items-center gap-2.5 text-white/85 text-sm font-medium mb-6" data-hero-animate>
+          <svg class="w-4 h-4 text-primary-light flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span class="tracking-wide">الرياض – المملكة العربية السعودية</span>
+        </div> -->
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8" data-hero-animate>
+          <span class="block">أسلوبك الصحي</span>
+          <span class="block mt-3 sm:mt-4">
+            <span class="text-gradient-green pb-1">بطريقة مختلفة</span>
+          </span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg sm:text-xl text-white/70 leading-relaxed mb-10 max-w-xl" data-hero-animate>
+          من بيتزا البروتين والبرجر الصحي إلى الاشتراكات اليومية.
+          الأكل اللي تحبه بأسلوب يناسب هدفك.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4" data-hero-animate>
+          <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+             class="btn-primary text-base px-8 py-4">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            اطلب الآن
+          </a>
+          <a href="#menu" class="btn-secondary text-base px-8 py-4">
+            استكشف المنيو
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/10" data-hero-animate>
+          <div>
+            <div class="text-3xl font-black text-white font-latin">5+</div>
+            <div class="text-white/55 text-sm mt-1">فروع في الرياض</div>
+          </div>
+          <div class="w-px bg-white/15 self-stretch"></div>
+          <div>
+            <div class="text-3xl font-black text-white font-latin">17+</div>
+            <div class="text-white/55 text-sm mt-1">قسم في المنيو</div>
+          </div>
+          <!-- <div class="w-px bg-white/15 self-stretch"></div>
+          <div>
+            <div class="text-3xl font-black text-white font-latin">21–28</div>
+            <div class="text-white/55 text-sm mt-1">يوم اشتراكات</div>
+          </div> -->
+        </div>
+
+      </div>
+
+      <!-- Left Column: Visual Showcase Card (Clean 2D Flat Edition) -->
+      <div class="lg:col-span-5 relative flex items-center justify-center pt-8 lg:pt-0" data-hero-animate>
+        <div class="hero-showcase-wrapper select-none">
+          
+          <!-- Ambient Glow Behind -->
+          <div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Main Showcase Card -->
+          <div class="hero-showcase-card flex flex-col justify-between">
+            
+            <!-- Card Top: Tag -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 border border-white/10 backdrop-blur-md">
+                <svg class="w-3.5 h-3.5 text-primary-light flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <span class="text-white text-xs font-semibold">مكونات طازجة يومياً</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-primary-light tracking-widest bg-primary/20 px-2.5 py-1 rounded-md border border-primary/30">FIT4LESS</span>
+            </div>
+
+            <!-- Card Center: Dish Visual -->
+            <div class="my-auto flex flex-col items-center justify-center py-4 text-center">
+              <!-- Glow Disc -->
+              <div class="w-44 h-44 sm:w-48 sm:h-48 rounded-full bg-gradient-to-tr from-primary/30 via-emerald-500/15 to-transparent flex items-center justify-center relative shadow-inner">
+                <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-black/50 border border-white/15 flex items-center justify-center backdrop-blur-md relative shadow-2xl">
+                  <!-- Healthy Salad / Dish Icon -->
+                  <div class="text-6xl select-none filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]">
+                    🥗
+                  </div>
+                  <!-- Floating Fresh Tag -->
+                  <div class="absolute -top-2 -right-2 bg-primary text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-lg border border-white/20">
+                    طازج 100%
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-white font-extrabold text-lg sm:text-xl mt-4 mb-1">بيتزا بروتين & أطباق متوازنة</h3>
+              <p class="text-white/60 text-xs sm:text-sm">أعلى قيمة غذائية بدون التضحية بالطعم</p>
+            </div>
+
+            <!-- Floating Badge 1: 101g Protein (Top Left) -->
+            <div class="hero-floating-badge absolute -top-12 -left-2 sm:-left-5 z-20 border border-primary/50 p-3 sm:p-3.5 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/25 text-primary-light flex items-center justify-center font-black text-base shadow-sm">
+                ⚡
+              </div>
+              <div>
+                <div class="text-white font-black text-base font-latin leading-tight">101g</div>
+                <div class="text-white/70 text-[11px] font-medium">بروتين</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Calories & Macro (Bottom Right) -->
+            <div class="hero-floating-badge absolute -bottom-10 -right-2 sm:-right-5 z-20 border border-accent/40 p-3 sm:p-3.5 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-accent/20 text-accent flex items-center justify-center font-bold text-base shadow-sm">
+                🔥
+              </div>
+              <div>
+                <div class="text-white font-bold text-xs leading-tight">سعرات محسوبة بالجرام</div>
+                <div class="text-primary-light text-[11px] font-semibold mt-0.5">تناسب كل نظام وهدف</div>
+              </div>
+            </div>
+
+            <!-- Card Bottom: Macros Summary Strip -->
+            <div class="grid grid-cols-3 gap-2 pt-3 border-t border-white/10 text-center mt-3">
+              <div class="bg-white/5 rounded-xl py-2 px-1.5 border border-white/5">
+                <div class="text-primary-light font-extrabold text-xs sm:text-sm font-latin">0%</div>
+                <div class="text-white/60 text-[10px]">حرمان</div>
+              </div>
+              <div class="bg-white/5 rounded-xl py-2 px-1.5 border border-white/5">
+                <div class="text-white font-extrabold text-xs sm:text-sm font-latin">100%</div>
+                <div class="text-white/60 text-[10px]">طعم حقيقي</div>
+              </div>
+              <div class="bg-white/5 rounded-xl py-2 px-1.5 border border-white/5">
+                <div class="text-accent font-extrabold text-xs sm:text-sm font-latin">21-28</div>
+                <div class="text-white/60 text-[10px]">يوم اشتراك</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+    <span class="text-xs">اسحب للأسفل</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHY FIT4LESS?
+     ============================================================ -->
+<section class="section-py bg-white">
+  <div class="container-custom">
+
+    <div class="text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit">ليه فت فور لس؟</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4">
+        صحتك ما تتنازل عنها
+      </h2>
+      <p class="text-gray-500 text-lg max-w-xl mx-auto">
+        بنقدمّلك الأكل اللي تحبه بمكونات مختارة بعناية وسعرات محسوبة — بدون ما تضحّي بالطعم.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger-parent data-stagger-delay="0.08">
+
+      <div class="feature-card" data-stagger-child>
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">أكلك المفضل بنسخة صحية</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">بيتزا، برجر، شاورما — بمكونات مختارة وسعرات محسوبة لكل وجبة.</p>
+      </div>
+
+      <div class="feature-card" data-stagger-child>
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">قيم غذائية واضحة</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">كل وجبة بتعرف فيها البروتين والكارب والدهون — شفافية كاملة.</p>
+      </div>
+
+      <div class="feature-card" data-stagger-child>
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">اشتراكات مرنة</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">اختار نظامك اليومي من 21 لـ 28 يوم وخصّصه حسب احتياجاتك.</p>
+      </div>
+
+      <div class="feature-card" data-stagger-child>
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">توصيل أو استلام</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">اطلب من الموقع أو التطبيق وخيّر بين التوصيل أو الاستلام من أقرب فرع.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EXPLORE MENU SECTIONS
+     ============================================================ -->
+<section id="menu" class="section-py bg-gray-50">
+  <div class="container-custom">
+
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12" data-animate>
+      <div>
+        <div class="section-label">استكشف المنيو</div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4">
+          كل ما تحتاجه في مكان واحد
+        </h2>
+        <p class="text-gray-500 text-lg mt-3 max-w-lg">
+          منيو متكامل يناسب كل هدف غذائي — من البروتين الفريش للحلويات الصحية.
+        </p>
+      </div>
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+         class="btn-primary flex-shrink-0 self-start sm:self-auto">
+        شوف المنيو كامل
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" data-stagger-parent data-stagger-delay="0.06">
+
+      <!-- عروض فت فور لس -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group col-span-1 sm:col-span-2 lg:col-span-1" data-stagger-child>
+        <div class="menu-card-icon" style="background:linear-gradient(135deg,#49973F,#3A7832);color:white;font-size:18px;">🎁</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">عروض فت فور لس</div>
+          <div class="text-gray-500 text-sm mt-0.5">أفضل العروض والأسعار</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- اشتراكات -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon" style="background:linear-gradient(135deg,#49973F,#3A7832);color:white;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">الاشتراكات</div>
+          <div class="text-gray-500 text-sm mt-0.5">21 – 28 يوم</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- قسم البروتين الفريش -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">💪</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">البروتين الفريش</div>
+          <div class="text-gray-500 text-sm mt-0.5">وجبات بروتين طازجة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- بروتين الدجاج -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🍗</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">البروتين – الدجاج</div>
+          <div class="text-gray-500 text-sm mt-0.5">أطباق دجاج صحية ومتنوعة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- أطباق اللحوم -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🥩</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">البروتين – اللحوم</div>
+          <div class="text-gray-500 text-sm mt-0.5">أطباق لحوم بروتين عالية</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- الأسماك -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🐟</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">البروتين – الأسماك</div>
+          <div class="text-gray-500 text-sm mt-0.5">أسماك طازجة وصحية</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- البيتزا -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🍕</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم البيتزا</div>
+          <div class="text-gray-500 text-sm mt-0.5">بيتزا بروتين وخيارات متنوعة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- الفطائر -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🥐</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">المعجنات – الفطائر</div>
+          <div class="text-gray-500 text-sm mt-0.5">فطائر صحية ولذيذة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- البرجر -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🍔</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم البرجر</div>
+          <div class="text-gray-500 text-sm mt-0.5">برجر صحي بمكونات مختارة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- الفطور -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🍳</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم الفطور</div>
+          <div class="text-gray-500 text-sm mt-0.5">فطور صحي ومغذي</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- الساندويتشات -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🥪</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم السندوتشات</div>
+          <div class="text-gray-500 text-sm mt-0.5">سندوتشات شاورما وأكثر</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- السلطات -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🥗</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">السلطات</div>
+          <div class="text-gray-500 text-sm mt-0.5">سلطات طازجة ومتنوعة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- الحلويات -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🍮</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم الحلويات</div>
+          <div class="text-gray-500 text-sm mt-0.5">حلويات صحية وبروتين بسبوسة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- الصوصات -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🫙</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم الصوصات</div>
+          <div class="text-gray-500 text-sm mt-0.5">صوصات منزلية ومحضّرة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- المشروبات -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🥤</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">قسم المشروبات</div>
+          <div class="text-gray-500 text-sm mt-0.5">مشروبات صحية وطبيعية</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- عسل أبو نايف -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">🍯</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">عسل أبو نايف</div>
+          <div class="text-gray-500 text-sm mt-0.5">عسل طبيعي أصيل</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+      <!-- مكملات غذائية -->
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="menu-card group" data-stagger-child>
+        <div class="menu-card-icon">💊</div>
+        <div>
+          <div class="font-bold text-gray-900 text-base">مكملات غذائية</div>
+          <div class="text-gray-500 text-sm mt-0.5">بروتين ومكملات متنوعة</div>
+        </div>
+        <svg class="menu-arrow mr-auto text-gray-400 group-hover:text-primary flex-shrink-0 transition-transform duration-200 group-hover:-translate-x-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></a>
+
+    </div><!-- /grid -->
+
+    <!-- CTA Bottom -->
+    <div class="mt-10 text-center px-4" data-animate>
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+         class="btn-primary inline-flex max-w-full text-sm sm:text-base px-5 sm:px-10 py-3 sm:py-4 leading-normal">
+        شوف المنيو الكامل وتصفّح الأسعار
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MEAL SUBSCRIPTIONS
+     ============================================================ -->
+<section id="subscriptions" class="section-py bg-white">
+  <div class="container-custom">
+
+    <div class="text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit">الاشتراكات الغذائية</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4">
+        خطّط لنظامك الغذائي
+      </h2>
+      <p class="text-gray-500 text-lg max-w-xl mx-auto">
+        اشتراكات مرنة من 21 لـ 28 يوم. اختار وجباتك اليومية واستمتع بالتوصيل لبابك.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+
+      <!-- 21 Day -->
+      <div class="sub-card" data-scale-in>
+        <div class="text-5xl font-black text-gray-200 mb-2 font-latin">21</div>
+        <div class="text-2xl font-bold text-gray-900 mb-1">يوم</div>
+        <div class="text-primary font-semibold text-sm mb-4">الخطة الأساسية</div>
+        <div class="divider-green"></div>
+        <ul class="mt-4 mb-8 space-y-3 flex-1">
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            وجبات يومية صحية
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            قيم غذائية محسوبة
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            توصيل يومي
+          </li>
+        </ul>
+        <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+           class="btn-outline-green text-center text-sm py-3">
+          خصّص اشتراكك
+        </a>
+      </div>
+
+      <!-- 24 Day – Featured -->
+      <div class="sub-card featured" data-scale-in>
+        <div class="sub-badge">⭐ الأكثر طلباً</div>
+        <div class="text-5xl font-black text-primary/20 mb-2 font-latin">24</div>
+        <div class="text-2xl font-bold text-gray-900 mb-1">يوم</div>
+        <div class="text-primary font-semibold text-sm mb-4">الخطة المتقدمة</div>
+        <div class="divider-green"></div>
+        <ul class="mt-4 mb-8 space-y-3 flex-1">
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            وجبات يومية صحية
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            قيم غذائية محسوبة
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            توصيل يومي
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            نتائج أسرع وأفضل
+          </li>
+        </ul>
+        <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+           class="btn-primary text-center text-sm py-3">
+          خصّص اشتراكك
+        </a>
+      </div>
+
+      <!-- 28 Day -->
+      <div class="sub-card" data-scale-in>
+        <div class="text-5xl font-black text-gray-200 mb-2 font-latin">28</div>
+        <div class="text-2xl font-bold text-gray-900 mb-1">يوم</div>
+        <div class="text-primary font-semibold text-sm mb-4">الخطة الشاملة</div>
+        <div class="divider-green"></div>
+        <ul class="mt-4 mb-8 space-y-3 flex-1">
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            وجبات يومية صحية
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            قيم غذائية محسوبة
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            توصيل يومي
+          </li>
+          <li class="flex items-center gap-2 text-gray-600 text-sm">
+            <svg class="text-primary flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            أقصى استفادة وأفضل قيمة
+          </li>
+        </ul>
+        <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+           class="btn-outline-green text-center text-sm py-3">
+          خصّص اشتراكك
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HOW TO ORDER
+     ============================================================ -->
+<section class="section-py bg-gray-50">
+  <div class="container-custom">
+
+    <div class="text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit">طريقة الطلب</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4">
+        3 خطوات وبس!
+      </h2>
+      <p class="text-gray-500 text-lg">سهل وسريع — ابدأ رحلتك الصحية دلوقتي.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative" data-stagger-parent data-stagger-delay="0.12">
+
+      <!-- Step 1 -->
+      <div class="text-center" data-stagger-child>
+        <div class="relative inline-flex">
+          <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mx-auto shadow-lg" style="box-shadow:0 8px 32px rgba(73,151,63,.3)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+          <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gray-900 text-white text-xs font-bold flex items-center justify-center font-latin">1</div>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mt-5 mb-2">اختار وجبتك</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">تصفّح المنيو الكامل واختار الأكل اللي يناسب هدفك الغذائي.</p>
+      </div>
+
+      <!-- Connector -->
+      <div class="hidden md:flex items-center justify-center absolute top-10 right-1/3 left-2/3 pointer-events-none">
+        <div style="width:100%;height:2px;background:linear-gradient(90deg,#49973F,#5DB84E);opacity:.35;border-radius:2px;"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center" data-stagger-child>
+        <div class="relative inline-flex">
+          <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mx-auto shadow-lg" style="box-shadow:0 8px 32px rgba(73,151,63,.3)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gray-900 text-white text-xs font-bold flex items-center justify-center font-latin">2</div>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mt-5 mb-2">حدّد التوصيل أو الاستلام</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">اختار أقرب فرع للاستلام أو سجّل عنوانك للتوصيل لبابك.</p>
+      </div>
+
+      <!-- Connector -->
+      <div class="hidden md:flex items-center justify-center absolute top-10 right-2/3 left-1/3 pointer-events-none">
+        <div style="width:100%;height:2px;background:linear-gradient(90deg,#5DB84E,#49973F);opacity:.35;border-radius:2px;"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center" data-stagger-child>
+        <div class="relative inline-flex">
+          <div class="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mx-auto shadow-lg" style="box-shadow:0 8px 32px rgba(73,151,63,.3)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gray-900 text-white text-xs font-bold flex items-center justify-center font-latin">3</div>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mt-5 mb-2">استمتع بوجبتك!</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">أكل صحي ولذيذ يوصلك وأنت مرتاح — وابدأ في تحقيق هدفك.</p>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- CTA -->
+    <div class="text-center mt-12 px-4" data-animate>
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
+         class="btn-primary text-sm sm:text-base px-6 sm:px-10 py-3 sm:py-4">
+        ابدأ طلبك الآن
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     OUR STORY
+     ============================================================ -->
+<section id="story" class="section-py bg-white overflow-hidden">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Text -->
+      <div data-animate>
+        <div class="section-label">قصتنا</div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-6">
+          من الرياض للجميع
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          آمنّا إن الأكل الصحي ما لازم يكون ممل. بدأنا بفكرة بسيطة: نقدم الوجبات اللي الناس تحبها — زي البيتزا والبرجر والشاورما — بطريقة صحية ومكونات مختارة بعناية.
+        </p>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+          اليوم، نخدم آلاف العملاء في الرياض عبر 5 فروع واشتراكات يومية تناسب كل هدف غذائي.
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-1 bg-primary rounded-full"></div>
+          <span class="text-primary font-bold italic text-lg">"أسلوبك الصحي بطريقة مختلفة"</span>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 gap-5" data-stagger-parent data-stagger-delay="0.1">
+
+        <div class="stat-card border border-gray-100" data-stagger-child>
+          <div class="text-4xl font-black text-primary mb-1 font-latin">5+</div>
+          <div class="text-gray-500 text-sm font-medium">فروع في الرياض</div>
+        </div>
+
+        <div class="stat-card bg-primary text-white" data-stagger-child>
+          <div class="text-4xl font-black mb-1 font-latin">17+</div>
+          <div class="text-sm font-medium opacity-80">قسم في المنيو</div>
+        </div>
+
+        <div class="stat-card bg-gray-900 text-white" data-stagger-child>
+          <div class="text-4xl font-black mb-1 font-latin">21</div>
+          <div class="text-sm font-medium opacity-70">يوم أقل اشتراك</div>
+        </div>
+
+        <div class="stat-card border border-gray-100" data-stagger-child>
+          <div class="text-4xl font-black text-primary mb-1">🏆</div>
+          <div class="text-gray-500 text-sm font-medium">تقييم ممتاز</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     LOCATIONS
+     ============================================================ -->
+<section id="locations" class="section-py bg-gray-50">
+  <div class="container-custom">
+
+    <div class="text-center mb-12" data-animate>
+      <div class="section-label mx-auto w-fit">فروعنا</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4">
+        5 فروع في الرياض
+      </h2>
+      <p class="text-gray-500 text-lg">قريب منك دائماً — ابحث عن أقرب فرع ليك.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger-parent data-stagger-delay="0.08">
+
+      <div class="branch-card" data-stagger-child>
+        <div class="flex items-start gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-base">النسيم الشرقي</h3>
+            <p class="text-gray-500 text-sm mt-0.5">شارع حسان بن ثابت، بجوار وقت اللياقة</p>
+          </div>
+        </div>
+        <a href="https://maps.google.com?q=فت+فور+لس+النسيم+الشرقي+الرياض" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          الاتجاهات
+        </a>
+      </div>
+
+      <div class="branch-card" data-stagger-child>
+        <div class="flex items-start gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-base">الندوة</h3>
+            <p class="text-gray-500 text-sm mt-0.5">طريق خريص، بجوار وقت اللياقة</p>
+          </div>
+        </div>
+        <a href="https://maps.google.com?q=فت+فور+لس+الندوة+الرياض" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          الاتجاهات
+        </a>
+      </div>
+
+      <div class="branch-card" data-stagger-child>
+        <div class="flex items-start gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-base">الحمراء</h3>
+            <p class="text-gray-500 text-sm mt-0.5">شارع خالد بن الوليد، بجوار بيور جيم</p>
+          </div>
+        </div>
+        <a href="https://maps.google.com?q=فت+فور+لس+الحمراء+الرياض" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          الاتجاهات
+        </a>
+      </div>
+
+      <div class="branch-card" data-stagger-child>
+        <div class="flex items-start gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-base">القادسية</h3>
+            <p class="text-gray-500 text-sm mt-0.5">الطريق الدائري الشمالي، بجانب الصالة الاقتصادية</p>
+          </div>
+        </div>
+        <a href="https://maps.google.com?q=فت+فور+لس+القادسية+الرياض" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          الاتجاهات
+        </a>
+      </div>
+
+      <div class="branch-card" data-stagger-child>
+        <div class="flex items-start gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-base">قرطبة</h3>
+            <p class="text-gray-500 text-sm mt-0.5">طريق الثمامة</p>
+          </div>
+        </div>
+        <a href="https://maps.google.com?q=فت+فور+لس+قرطبة+الرياض" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          الاتجاهات
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     DOWNLOAD APP
+     ============================================================ -->
+<section id="app" class="section-py overflow-hidden" style="background:linear-gradient(135deg,#111111 0%,#1a2e18 50%,#1e3a1b 100%);">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Text -->
+      <div data-animate>
+        <div class="inline-flex items-center gap-2.5 text-primary-light text-sm font-bold mb-4">
+          <span class="w-5 h-0.5 bg-primary-light rounded-full"></span>
+          <span>متاح على iOS و Android</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5">
+          اطلب من التطبيق<br/>
+          <span class="text-gradient-green">بضغطة واحدة</span>
+        </h2>
+        <p class="text-white/65 text-lg leading-relaxed mb-8">
+          حمّل تطبيق فت فور لس وتصفّح المنيو الكامل، واطلب وجبتك المفضلة، وتابع اشتراكك — كل شي في مكان واحد.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <!-- App Store -->
+          <a href="https://apps.apple.com/sa/app/id6469492605" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div>
+              <div class="text-white/60 text-xs leading-none mb-0.5">حمّل من</div>
+              <div class="text-white font-semibold text-sm leading-none">App Store</div>
+            </div>
+          </a>
+          <!-- Google Play -->
+          <a href="https://play.google.com/store/apps/details?id=com.foodtech.fit4less" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+              <path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l15 8.5-15 8.5c-.5.33-1.5.33-1.5-.5zM3 20.5"/>
+            </svg>
+            <div>
+              <div class="text-white/60 text-xs leading-none mb-0.5">حمّل من</div>
+              <div class="text-white font-semibold text-sm leading-none">Google Play</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup (CSS) -->
+      <div class="flex justify-center lg:justify-end" data-animate>
+        <div class="relative">
+          <!-- Phone shell -->
+          <div class="w-64 h-[520px] rounded-[3rem] border-4 border-white/20 bg-gray-900 shadow-2xl relative overflow-hidden flex flex-col" style="box-shadow:0 40px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.05);">
+            <!-- Status bar -->
+            <div class="h-8 bg-black/40 flex items-center justify-between px-6 flex-shrink-0">
+              <span class="text-white/60 text-[10px] font-latin">9:41</span>
+              <div class="flex items-center gap-1">
+                <div class="w-4 h-2 border border-white/40 rounded-sm relative">
+                  <div class="absolute inset-0.5 right-0.5 bg-primary rounded-sm" style="width:70%"></div>
+                </div>
+              </div>
+            </div>
+            <!-- App screen -->
+            <div class="flex-1 bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col items-center justify-center p-6 text-center">
+              <div class="w-16 h-16 rounded-2xl bg-primary p-2.5 flex items-center justify-center mb-4 shadow-lg border border-white/10">
+                <img src="assets/images/logo-white.png" alt="Fit4Less App Icon" class="w-full h-full object-contain" />
+              </div>
+              <div class="text-white font-bold text-xl mb-1">Fit<span class="text-primary-light">4</span>Less</div>
+              <div class="text-white/50 text-xs mb-8">أسلوبك الصحي بطريقة مختلفة</div>
+              <!-- Mock cards -->
+              <div class="w-full space-y-2">
+                <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-sm">🍕</div>
+                  <div class="text-right flex-1">
+                    <div class="text-white text-xs font-semibold">بيتزا بروتين</div>
+                    <div class="text-white/40 text-[10px]">101جم بروتين</div>
+                  </div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-sm">🍔</div>
+                  <div class="text-right flex-1">
+                    <div class="text-white text-xs font-semibold">برجر لحم صحي</div>
+                    <div class="text-white/40 text-[10px]">39جم بروتين</div>
+                  </div>
+                </div>
+                <div class="bg-primary rounded-xl p-3 text-center">
+                  <span class="text-white text-xs font-bold">اطلب الآن</span>
+                </div>
+              </div>
+            </div>
+            <!-- Home indicator -->
+            <div class="h-6 bg-black/40 flex items-center justify-center flex-shrink-0">
+              <div class="w-20 h-1 bg-white/30 rounded-full"></div>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -right-4 top-16 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2">
+            <div class="text-lg">⭐</div>
+            <div>
+              <div class="text-gray-900 font-bold text-xs">تقييم ممتاز</div>
+              <div class="text-gray-400 text-[10px]">App Store & Play</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section-py bg-white">
+  <div class="container-custom max-w-3xl">
+
+    <div class="text-center mb-12" data-animate>
+      <div class="section-label mx-auto w-fit">الأسئلة الشائعة</div>
+      <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-4 mb-4">
+        عندك سؤال؟
+      </h2>
+      <p class="text-gray-500 text-lg">إجابات على أكثر الأسئلة شيوعاً.</p>
+    </div>
+
+    <div class="space-y-3" data-stagger-parent data-stagger-delay="0.07">
+
+      <div class="faq-item" data-stagger-child>
+        <button class="faq-question">
+          ما الفرق بين فت فور لس وباقي مطاعم الدايت؟
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          نقدّم الأكل اللي تحبه — زي البيتزا والبرجر والشاورما — بمكونات مختارة بعناية وسعرات محسوبة. ما عندنا "أكل دايت ممل"، عندنا أكل لذيذ بنسخة صحية.
+        </div>
+      </div>
+
+      <div class="faq-item" data-stagger-child>
+        <button class="faq-question">
+          هل أقدر أخصّص وجبات الاشتراك؟
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          نعم! الاشتراكات مصممة تكون مرنة حسب احتياجاتك. تواصل معنا عبر واتساب أو من خلال الموقع لمعرفة تفاصيل التخصيص.
+        </div>
+      </div>
+
+      <div class="faq-item" data-stagger-child>
+        <button class="faq-question">
+          ما هي مناطق التوصيل المتاحة؟
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          نوصّل لمناطق واسعة في الرياض من خلال فروعنا الخمسة. للتأكد من توفر التوصيل لمنطقتك، تواصل معنا مباشرة.
+        </div>
+      </div>
+
+      <div class="faq-item" data-stagger-child>
+        <button class="faq-question">
+          هل المعلومات الغذائية دقيقة؟
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          نعم، كل وجبة لها قيم غذائية محسوبة تجدها في المنيو. نلتزم بالشفافية الكاملة في المكونات والسعرات الحرارية.
+        </div>
+      </div>
+
+      <div class="faq-item" data-stagger-child>
+        <button class="faq-question">
+          كيف أطلب اشتراكاً غذائياً؟
+          <span class="faq-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          من الموقع الرسمي fit4less.net أو التطبيق، اختار قسم الاشتراكات وخصّص خطتك. أو تواصل معنا مباشرة عبر واتساب.
+        </div>
+      </div>
+
+    </div><!-- /faq list -->
+
+    <!-- Still have questions -->
+    <div class="mt-10 text-center p-8 bg-primary-pale rounded-2xl" data-animate>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">عندك سؤال ثاني؟</h3>
+      <p class="text-gray-500 mb-5">فريقنا جاهز يساعدك على واتساب</p>
+      <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit4Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer"
+         class="btn-primary inline-flex">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+        </svg>
+        تواصل معنا الآن
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer style="background:#111111;">
+  <div class="container-custom py-12 lg:py-16">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-12 w-auto object-contain" />
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">
+          أسلوبك الصحي بطريقة مختلفة. وجبات صحية لذيذة واشتراكات غذائية مرنة في الرياض.
+        </p>
+        <!-- Social links -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/fit4less.ksa/" target="_blank" rel="noopener noreferrer"
+             class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit4Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer"
+             class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#25D366] transition-colors cursor-pointer" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">روابط سريعة</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#menu"          class="footer-link text-sm">استكشف المنيو</a></li>
+          <li><a href="#subscriptions" class="footer-link text-sm">الاشتراكات</a></li>
+          <li><a href="#locations"     class="footer-link text-sm">فروعنا</a></li>
+          <li><a href="#story"         class="footer-link text-sm">قصتنا</a></li>
+          <li><a href="#app"           class="footer-link text-sm">حمّل التطبيق</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">تواصل معنا</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="tel:0114516498" class="footer-link text-sm flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              0114516498
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit4Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+              </svg>
+              واتساب
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/fit4less.ksa/" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              @fit4less.ksa
+            </a>
+          </li>
+          <li>
+            <a href="https://fit4less.net" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              fit4less.net
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- Bottom bar -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-gray-500 text-sm">
+        © 2024 Fit4Less. جميع الحقوق محفوظة.
+      </p>
+      <div class="flex items-center gap-4">
+        <a href="https://apps.apple.com/sa/app/id6469492605" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">App Store</a>
+        <span class="text-gray-700">·</span>
+        <a href="https://play.google.com/store/apps/details?id=com.foodtech.fit4less" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">Google Play</a>
+        <span class="text-gray-700">·</span>
+        <a href="https://linktr.ee/fit4less.ksa" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">Linktree</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     WHATSAPP FLOATING BUTTON
+     ============================================================ -->
+<a id="whatsapp-fab" href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit4Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- BACK TO TOP -->
+<!-- <a id="back-to-top" href="#" aria-label="العودة للأعلى">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</a> -->
+
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+
+<!-- Motion.dev (vanilla JS) -->
+<script>
+  // Load Motion.dev and expose as window.Motion
+  (function(){
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/motion@11/dist/motion.min.js';
+    s.onload = function(){
+      // motion exports animate, inView etc. directly
+      window.Motion = window.Motion || Motion;
+      // Fire main.js after Motion is ready
+      var m = document.createElement('script');
+      m.src = 'assets/js/main.js';
+      document.body.appendChild(m);
+    };
+    s.onerror = function(){
+      // Fallback: load main.js without animations
+      var m = document.createElement('script');
+      m.src = 'assets/js/main.js';
+      document.body.appendChild(m);
+    };
+    document.body.appendChild(s);
+  })();
+</script>
+
+</body>
+</html>
+
