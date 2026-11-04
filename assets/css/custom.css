@@ -76,7 +76,8 @@ body {
 #navbar {
   transition: background var(--transition-normal),
               box-shadow var(--transition-normal),
-              backdrop-filter var(--transition-normal);
+              backdrop-filter var(--transition-normal),
+              opacity var(--transition-normal);
 }
 #navbar.scrolled {
   background: rgba(17, 17, 17, 0.95);
@@ -104,10 +105,21 @@ body {
 
 /* ---- Mobile Menu ---- */
 #mobile-menu {
+  z-index: 1100;
   transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
-#mobile-menu.hidden { opacity: 0; transform: translateY(-8px); pointer-events: none; }
-#mobile-menu.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#mobile-menu.hidden {
+  display: none !important;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+#mobile-menu.visible {
+  display: flex !important;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
 /* =============================================
    HERO SECTION
