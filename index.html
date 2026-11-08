@@ -58,16 +58,19 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-7">
-        <a href="#menu"          class="nav-link text-white/80 text-sm font-medium" data-section="menu" data-i18n="nav.menu">المنيو</a>
-        <a href="#subscriptions" class="nav-link text-white/80 text-sm font-medium" data-section="subscriptions" data-i18n="nav.subscriptions">الاشتراكات</a>
-        <a href="#locations"     class="nav-link text-white/80 text-sm font-medium" data-section="locations" data-i18n="nav.locations">فروعنا</a>
-        <a href="#story"         class="nav-link text-white/80 text-sm font-medium" data-section="story" data-i18n="nav.story">قصتنا</a>
-        <a href="#app"           class="nav-link text-white/80 text-sm font-medium" data-section="app" data-i18n="nav.app">التطبيق</a>
+      <nav class="hidden xl:flex items-center gap-5 2xl:gap-6">
+        <a href="#about"          class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="about" data-i18n="nav.about">من نحن</a>
+        <a href="#business-model" class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="business-model" data-i18n="nav.businessModel">نموذج أعمالنا</a>
+        <a href="#products"       class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="products" data-i18n="nav.products">منتجاتنا</a>
+        <a href="#quality"        class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="quality" data-i18n="nav.quality">الجودة</a>
+        <a href="#locations"     class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="locations" data-i18n="nav.locations">فروعنا</a>
+        <a href="#menu"          class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="menu" data-i18n="nav.menu">المنيو</a>
+        <a href="#subscriptions" class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="subscriptions" data-i18n="nav.subscriptions">الاشتراكات</a>
+        <a href="#partnerships"  class="nav-link text-white/80 text-sm font-medium hover:text-white" data-section="partnerships" data-i18n="nav.partnerships">الشراكات</a>
       </nav>
 
       <!-- CTA + Lang + Hamburger -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5 sm:gap-3">
         <!-- Language Switcher Button (Desktop) -->
         <button id="lang-toggle-btn" class="lang-btn hidden lg:inline-flex" aria-label="Switch Language / تبديل اللغة" title="Switch Language / تبديل اللغة">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -79,14 +82,14 @@
         </button>
 
         <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
-           class="btn-primary text-sm py-2.5 px-5 hidden sm:inline-flex" data-i18n="nav.orderNow">
+           class="btn-primary text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 hidden sm:inline-flex" data-i18n="nav.orderNow">
           اطلب الآن
         </a>
         <a href="tel:0114516498" target="_blank" rel="noopener noreferrer"
-           class="btn-primary text-sm py-2.5 px-5 hidden sm:inline-flex" data-i18n="nav.callUs">
+           class="btn-primary text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 hidden md:inline-flex" data-i18n="nav.callUs">
           إتصل بنا
         </a>
-        <button id="menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 transition-colors cursor-pointer" aria-label="فتح القائمة">
+        <button id="menu-btn" class="xl:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 transition-colors cursor-pointer" aria-label="فتح القائمة">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
             <line x1="3" y1="6"  x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -115,15 +118,21 @@
       </button>
     </div>
   </div>
-  <nav class="container-custom flex flex-col gap-1 pt-6 pb-10">
-    <a href="#menu"          class="text-white text-lg font-semibold py-3.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.menu">المنيو</a>
-    <a href="#subscriptions" class="text-white text-lg font-semibold py-3.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
-    <a href="#locations"     class="text-white text-lg font-semibold py-3.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.locations">فروعنا</a>
-    <a href="#story"         class="text-white text-lg font-semibold py-3.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.story">قصتنا</a>
-    <a href="#app"           class="text-white text-lg font-semibold py-3.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.app">التطبيق</a>
+  <nav class="container-custom flex flex-col gap-1 pt-4 pb-10">
+    <a href="#hero"           class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.home">الرئيسية</a>
+    <a href="#about"          class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.about">من نحن</a>
+    <a href="#business-model" class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.businessModel">نموذج أعمالنا</a>
+    <a href="#products"       class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.products">منتجاتنا وخدماتنا</a>
+    <a href="#quality"        class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.quality">الجودة والتغذية</a>
+    <a href="#locations"      class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.locations">فروعنا</a>
+    <a href="#team"           class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.team">فريق العمل</a>
+    <a href="#expansion"      class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.expansion">التوسع والنمو</a>
+    <a href="#menu"           class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.menu">المنيو</a>
+    <a href="#subscriptions"  class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
+    <a href="#partnerships"   class="text-white text-base font-semibold py-2.5 border-b border-white/10 hover:text-primary transition-colors" data-i18n="nav.partnerships">الشراكات والتواصل</a>
     
     <!-- Language Toggle Row inside mobile nav -->
-    <div class="py-3.5 border-b border-white/10 flex items-center justify-between">
+    <div class="py-3 border-b border-white/10 flex items-center justify-between">
       <div class="flex items-center gap-2.5 text-white/80 font-medium">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-light">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
@@ -135,13 +144,13 @@
         <span class="mobile-nav-lang-label">English</span>
       </button>
     </div>
-    <div class="pt-6 flex flex-col gap-3">
+    <div class="pt-5 flex flex-col gap-2.5">
       <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
-         class="btn-primary text-center text-base py-3.5 justify-center" data-i18n="nav.orderNow">
+         class="btn-primary text-center text-sm sm:text-base py-3 justify-center" data-i18n="nav.orderNow">
         اطلب الآن
       </a>
       <a href="tel:0114516498" target="_blank" rel="noopener noreferrer"
-         class="btn-primary text-center text-base py-3.5 justify-center" data-i18n="nav.callUs">
+         class="btn-secondary text-center text-sm sm:text-base py-3 justify-center" data-i18n="nav.callUs">
         إتصل بنا
       </a>
     </div>
@@ -168,52 +177,69 @@
       <!-- Right Column: Text & CTAs & Stats -->
       <div class="lg:col-span-7">
 
-        <!-- Location Tag -->
-        <!-- <div class="inline-flex items-center gap-2.5 text-white/85 text-sm font-medium mb-6" data-hero-animate>
-          <svg class="w-4 h-4 text-primary-light flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
-          <span class="tracking-wide">الرياض – المملكة العربية السعودية</span>
-        </div> -->
+        <!-- Brand Name Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-sm font-bold mb-6" data-hero-animate>
+          <span class="w-2 h-2 rounded-full bg-primary-light animate-pulse"></span>
+          <span data-i18n="hero.brandName">فت فور لس</span>
+        </div>
 
         <!-- Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-8" data-hero-animate>
-          <span class="block" data-i18n="hero.headlinePart1">أسلوبك الصحي</span>
-          <span class="block mt-3 sm:mt-4">
-            <span class="text-gradient-green pb-1" data-i18n="hero.headlinePart2">بطريقة مختلفة</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-black text-white mb-6 leading-tight" data-hero-animate>
+          <span class="block" data-i18n="hero.headlinePart1">مفهوم مختلف للأغذية الصحية،</span>
+          <span class="block mt-2 sm:mt-3">
+            <span class="text-gradient-green pb-1" data-i18n="hero.headlinePart2">ورؤية تتجاوز الحدود.</span>
           </span>
         </h1>
 
-        <!-- Subheadline -->
-        <p class="text-lg sm:text-xl text-white/70 leading-relaxed mb-10 max-w-xl" data-hero-animate data-i18n="hero.subtitle">من بيتزا البروتين والبرجر الصحي إلى الاشتراكات اليومية. الأكل اللي تحبه بأسلوب يناسب هدفك.</p>
+        <!-- Narrative -->
+        <div class="space-y-3.5 text-base sm:text-lg text-white/80 leading-relaxed mb-8 max-w-2xl" data-hero-animate>
+          <p data-i18n="hero.p1">شركة سعودية متخصصة في قطاع المطاعم والأغذية الصحية، تأسست عام 2021، لتقدم تجربة غذائية تجمع بين المذاق والجودة والتوازن الغذائي.</p>
+          <p class="text-white/70 text-sm sm:text-base" data-i18n="hero.p2">نقدم مجموعة متنوعة من الأطعمة والوجبات عالية البروتين والاشتراكات الغذائية، من خلال نموذج تشغيلي متكامل يركز على جودة المنتجات، وتنوع الخيارات، وسهولة الوصول إلى تجربة غذائية تناسب أنماط الحياة المختلفة.</p>
+          <p class="text-primary-light font-semibold text-sm sm:text-base italic" data-i18n="hero.tagline">نحن لا نقدم وجبات فحسب، بل نبني تجربة غذائية متكاملة قابلة للنمو والتوسع.</p>
+        </div>
 
-        <!-- CTAs -->
-        <div class="flex flex-wrap gap-4" data-hero-animate>
-          <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
-             class="btn-primary text-base px-8 py-4">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
-            </svg>
-            <span data-i18n="hero.orderNow">اطلب الآن</span>
-          </a>
-          <a href="#menu" class="btn-secondary text-base px-8 py-4">
-            <span data-i18n="hero.exploreMenu">استكشف المنيو</span>
+        <!-- Official CTAs: [اكتشف الشركة] – [استكشف فروعنا] – [تعرّف على منتجاتنا] -->
+        <div class="flex flex-wrap gap-3 sm:gap-4 mb-8" data-hero-animate>
+          <a href="#about" class="btn-primary text-sm sm:text-base px-6 py-3.5">
+            <span data-i18n="hero.btnAbout">اكتشف الشركة</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </a>
+          <a href="#locations" class="btn-secondary text-sm sm:text-base px-6 py-3.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span data-i18n="hero.btnLocations">استكشف فروعنا</span>
+          </a>
+          <a href="#products" class="btn-secondary text-sm sm:text-base px-6 py-3.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span data-i18n="hero.btnProducts">تعرّف على منتجاتنا</span>
+          </a>
+          <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm sm:text-base px-6 py-3.5">
+            <span data-i18n="hero.btnOrder">اطلب الآن</span>
+          </a>
         </div>
 
         <!-- Quick stats -->
-        <div class="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/10" data-hero-animate>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10" data-hero-animate>
           <div>
-            <div class="text-3xl font-black text-white font-latin" data-counter="7" data-suffix="+">7+</div>
-            <div class="text-white/55 text-sm mt-1" data-i18n="hero.branchesLabel">فروع في الرياض</div>
+            <div class="text-2xl sm:text-3xl font-black text-white font-latin" data-counter="2021">2021</div>
+            <div class="text-white/60 text-xs sm:text-sm mt-0.5" data-i18n="numbers.stat1Lbl">عام تأسيس الشركة</div>
           </div>
-          <div class="w-px bg-white/15 self-stretch"></div>
           <div>
-            <div class="text-3xl font-black text-white font-latin" data-counter="17" data-suffix="+">17+</div>
-            <div class="text-white/55 text-sm mt-1" data-i18n="hero.menuLabel">قسم في المنيو</div>
+            <div class="text-2xl sm:text-3xl font-black text-white font-latin" data-counter="350" data-suffix="+">350+</div>
+            <div class="text-white/60 text-xs sm:text-sm mt-0.5" data-i18n="numbers.stat2Lbl">موظف ضمن فريق العمل</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-black text-white font-latin">1M+</div>
+            <div class="text-white/60 text-xs sm:text-sm mt-0.5" data-i18n="numbers.stat3Lbl">عميل تم خدمتهم</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-black text-white font-latin" data-counter="6">6</div>
+            <div class="text-white/60 text-xs sm:text-sm mt-0.5" data-i18n="numbers.stat4Lbl">فروع تشغيلية</div>
           </div>
         </div>
 
@@ -310,60 +336,337 @@
 
 
 <!-- ============================================================
-     WHY FIT4LESS?
+     2. FIT FOR LESS BY NUMBERS (فت فور لس بالأرقام)
      ============================================================ -->
-<section class="section-py bg-white">
+<section id="numbers" class="section-py bg-gray-50 border-b border-gray-100">
   <div class="container-custom">
-
-    <div class="text-center mb-14" data-animate>
-      <div class="section-label mx-auto w-fit" data-i18n="features.badge">ليه فت فور لس؟</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4" data-i18n="features.title">صحتك ما تتنازل عنها</h2>
-      <p class="text-gray-500 text-lg max-w-xl mx-auto" data-i18n="features.subtitle">بنقدمّلك الأكل اللي تحبه بمكونات مختارة بعناية وسعرات محسوبة — بدون ما تضحّي بالطعم.</p>
+    <div class="text-center mb-12" data-animate>
+      <div class="section-label mx-auto w-fit" data-i18n="numbers.badge">فت فور لس بالأرقام</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="numbers.title">أرقام تعكس حجم النمو والثقة</h2>
+      <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto" data-i18n="numbers.subtitle">تعكس هذه الأرقام حجم عمليات الشركة وانتشارها وخبرتها في خدمة قطاع الأغذية الصحية.</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger-parent data-stagger-delay="0.08">
-
-      <div class="feature-card" data-stagger-child>
-        <div class="feature-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
+      
+      <div class="corp-card text-center relative overflow-hidden group" data-stagger-child>
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+          🏢
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="features.card1Title">أكلك المفضل بنسخة صحية</h3>
-        <p class="text-gray-500 text-sm leading-relaxed" data-i18n="features.card1Desc">بيتزا، برجر، شاورما — بمكونات مختارة وسعرات محسوبة لكل وجبة.</p>
+        <div class="text-4xl lg:text-4xl font-black text-gray-900 font-latin mb-2" data-counter="2021">2021</div>
+        <div class="text-gray-600 font-bold text-sm sm:text-base" data-i18n="numbers.stat1Lbl">عام تأسيس الشركة</div>
       </div>
 
-      <div class="feature-card" data-stagger-child>
-        <div class="feature-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
-          </svg>
+      <div class="corp-card text-center relative overflow-hidden group" data-stagger-child>
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+          👥
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="features.card2Title">قيم غذائية واضحة</h3>
-        <p class="text-gray-500 text-sm leading-relaxed" data-i18n="features.card2Desc">كل وجبة بتعرف فيها البروتين والكارب والدهون — شفافية كاملة.</p>
+        <div class="text-4xl lg:text-4xl font-black text-primary font-latin mb-2" data-counter="350" data-suffix="+">350+</div>
+        <div class="text-gray-600 font-bold text-sm sm:text-base" data-i18n="numbers.stat2Lbl">موظف ضمن فريق العمل</div>
       </div>
 
-      <div class="feature-card" data-stagger-child>
-        <div class="feature-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
+      <div class="corp-card text-center relative overflow-hidden group" data-stagger-child>
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+          ⭐
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="features.card3Title">اشتراكات مرنة</h3>
-        <p class="text-gray-500 text-sm leading-relaxed" data-i18n="features.card3Desc">اختار نظامك اليومي من 21 لـ 28 يوم وخصّصه حسب احتياجاتك.</p>
+        <div class="text-4xl lg:text-4xl font-black text-gray-900 font-latin mb-2">1,000,000+</div>
+        <div class="text-gray-600 font-bold text-sm sm:text-base" data-i18n="numbers.stat3Lbl">عميل تم خدمتهم</div>
       </div>
 
-      <div class="feature-card" data-stagger-child>
-        <div class="feature-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
+      <div class="corp-card text-center relative overflow-hidden group" data-stagger-child>
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+          📍
         </div>
-        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="features.card4Title">توصيل أو استلام</h3>
-        <p class="text-gray-500 text-sm leading-relaxed" data-i18n="features.card4Desc">اطلب من الموقع أو التطبيق وخيّر بين التوصيل أو الاستلام من أقرب فرع.</p>
+        <div class="text-4xl lg:text-4xl font-black text-primary font-latin mb-2" data-counter="6">6</div>
+        <div class="text-gray-600 font-bold text-sm sm:text-base" data-i18n="numbers.stat4Lbl">فروع تشغيلية في مدينة الرياض</div>
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     3. ABOUT US (من نحن)
+     ============================================================ -->
+<section id="about" class="section-py bg-white">
+  <div class="container-custom">
+    
+    <!-- Narrative -->
+    <div class="max-w-4xl mx-auto text-center mb-16" data-animate>
+      <div class="section-label mx-auto w-fit" data-i18n="about.badge">من نحن</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-6 leading-tight" data-i18n="about.title">نبني مفهومًا جديدًا للأغذية الصحية</h2>
+      
+      <div class="space-y-4 text-gray-600 text-base sm:text-lg leading-relaxed text-start sm:text-center">
+        <p data-i18n="about.p1">تأسست فت فور لس في المملكة العربية السعودية عام 2021، برؤية تهدف إلى تطوير مفهوم المطاعم الصحية وتقديم خيارات غذائية تجمع بين المذاق المميز والاهتمام بالقيم الغذائية.</p>
+        <p data-i18n="about.p2">منذ انطلاقتنا، عملنا على بناء علامة تجارية تقدم مجموعة متنوعة من المنتجات، تشمل الوجبات عالية البروتين، والبيتزا، والبرجر، والشاورما، والوجبات الطازجة، والاشتراكات الغذائية.</p>
+        <p data-i18n="about.p3">نعتمد على منظومة تشغيلية تشمل تطوير المنتجات، وإدارة الفروع، والإمداد، والتحضير، وخدمة العملاء، بما يساعدنا على الحفاظ على تجربة متسقة عبر مواقعنا التشغيلية. واليوم، نواصل تطوير أعمالنا وتعزيز حضورنا في السوق السعودي، وفق رؤية طموحة للنمو والتوسع.</p>
+      </div>
+    </div>
+
+    <!-- Vision & Mission Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16" data-animate>
+      
+      <!-- Vision -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#111111] to-[#1c2c1a] text-white border border-primary/30 relative overflow-hidden shadow-xl">
+        <div class="w-12 h-12 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-5">
+          🎯
+        </div>
+        <h3 class="text-2xl font-black text-white mb-3" data-i18n="about.visionTitle">رؤيتنا</h3>
+        <p class="text-white/80 text-base leading-relaxed" data-i18n="about.visionDesc">أن نكون علامة رائدة في تطوير مفهوم الأغذية الصحية، وأن نقدم نموذجًا غذائيًا وتشغيليًا قادرًا على الوصول إلى أسواق جديدة.</p>
+      </div>
+
+      <!-- Mission -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-primary-pale/60 border border-primary/20 text-gray-900 relative overflow-hidden shadow-md">
+        <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-2xl mb-5">
+          🚀
+        </div>
+        <h3 class="text-2xl font-black text-gray-900 mb-3" data-i18n="about.missionTitle">رسالتنا</h3>
+        <p class="text-gray-700 text-base leading-relaxed" data-i18n="about.missionDesc">تقديم خيارات غذائية متنوعة تجمع بين الجودة والمذاق والتوازن الغذائي، من خلال تجربة متكاملة تلبي احتياجات العملاء وتواكب أنماط حياتهم.</p>
+      </div>
+
+    </div>
+
+    <!-- Core Values -->
+    <div class="mt-8">
+      <div class="text-center mb-10" data-animate>
+        <span class="text-primary font-bold text-sm tracking-wider uppercase" data-i18n="about.valuesBadge">قيمنا المؤسسية</span>
+        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 mt-2" data-i18n="about.valuesTitle">المبادئ التي تقود عملنا اليومي</h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-parent data-stagger-delay="0.08">
+        
+        <div class="value-card" data-stagger-child>
+          <div class="text-3xl mb-3">🏅</div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2" data-i18n="about.v1Title">الجودة والاهتمام بالتفاصيل</h4>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v1Desc">التزام لا تهاون فيه بأعلى معايير انتقاء المكونات وإعداد كل صنف غذائي.</p>
+        </div>
+
+        <div class="value-card" data-stagger-child>
+          <div class="text-3xl mb-3">💡</div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2" data-i18n="about.v2Title">الابتكار والتطوير المستمر</h4>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v2Desc">ابتكار خيارات غذائية غير تقليدية تدمج الطعم اللذيذ مع القيمة الغذائية.</p>
+        </div>
+
+        <div class="value-card" data-stagger-child>
+          <div class="text-3xl mb-3">🔍</div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2" data-i18n="about.v3Title">الشفافية والدقة الغذائية</h4>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v3Desc">وضوح تام وحسابات دقيقة للبروتين والكربوهيدرات والدهون والسعرات لكل صنف.</p>
+        </div>
+
+        <div class="value-card" data-stagger-child>
+          <div class="text-3xl mb-3">⚙️</div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2" data-i18n="about.v4Title">كفاءة التشغيل وتوحيد المعايير</h4>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v4Desc">منظومة عمل متسقة تضمن تجربة متميزة ومطابقة في كل الفروع دون اختلاف.</p>
+        </div>
+
+        <div class="value-card" data-stagger-child>
+          <div class="text-3xl mb-3">❤️</div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2" data-i18n="about.v5Title">التركيز على تجربة العميل</h4>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v5Desc">وضع متطلبات العميل وراحته في صميم كل قرار، من الطلب وحتى الاستلام.</p>
+        </div>
+
+        <div class="value-card" data-stagger-child>
+          <div class="text-3xl mb-3">🌱</div>
+          <h4 class="text-lg font-bold text-gray-900 mb-2" data-i18n="about.v6Title">النمو المستدام وروح الفريق</h4>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v6Desc">بناء بيئة عمل داعمة تستند إلى روح الفريق الواحد وتدعم التوسع المستمر.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. BUSINESS MODEL (نموذج أعمالنا)
+     ============================================================ -->
+<section id="business-model" class="section-py bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit" data-i18n="businessModel.badge">نموذج أعمالنا</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="businessModel.title">منظومة متكاملة من المنتج إلى العميل</h2>
+      <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto" data-i18n="businessModel.subtitle">يعتمد نموذج عمل فت فور لس على تطوير وإدارة مجموعة من الأنشطة المترابطة في قطاع الأغذية الصحية.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger-parent data-stagger-delay="0.08">
+      
+      <div class="pillar-card" data-stagger-child>
+        <div class="w-12 h-12 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-xl mb-4 font-bold">01</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="businessModel.p1Title">المطاعم والفروع</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p1Desc">تشغيل فروع تقدم تجربة غذائية متكاملة، مع التركيز على جودة المنتجات وسرعة الخدمة وتوحيد معايير التشغيل.</p>
+      </div>
+
+      <div class="pillar-card" data-stagger-child>
+        <div class="w-12 h-12 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-xl mb-4 font-bold">02</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="businessModel.p2Title">تطوير المنتجات</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p2Desc">ابتكار وتطوير أصناف غذائية متنوعة تراعي المذاق والمكونات والقيم الغذائية.</p>
+      </div>
+
+      <div class="pillar-card" data-stagger-child>
+        <div class="w-12 h-12 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-xl mb-4 font-bold">03</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="businessModel.p3Title">الاشتراكات الغذائية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p3Desc">تقديم برامج اشتراك غذائية تتيح للعملاء الحصول على وجباتهم بصورة منظمة وفق باقات ومدد مختلفة.</p>
+      </div>
+
+      <div class="pillar-card" data-stagger-child>
+        <div class="w-12 h-12 rounded-2xl bg-primary-pale text-primary flex items-center justify-center text-xl mb-4 font-bold">04</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="businessModel.p4Title">الطلبات الرقمية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p4Desc">تسهيل وصول العملاء إلى المنتجات والخدمات من خلال قنوات الطلب الرقمية والتوصيل السريع.</p>
+      </div>
+
+      <div class="pillar-card md:col-span-2 lg:col-span-2" data-stagger-child>
+        <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-xl mb-4 font-bold">05</div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2" data-i18n="businessModel.p5Title">إدارة العمليات</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p5Desc">تنظيم عمليات التحضير والإمداد والمخزون والموارد البشرية ومراقبة الجودة لضمان استمرارية الأداء بين الفروع.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. PRODUCTS & SERVICES (منتجاتنا وخدماتنا)
+     ============================================================ -->
+<section id="products" class="section-py bg-white">
+  <div class="container-custom">
+    <div class="text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit" data-i18n="products.badge">منتجاتنا وخدماتنا</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="products.title">خيارات متنوعة، وتجربة غذائية متكاملة</h2>
+      <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto" data-i18n="products.subtitle">تقدم فت فور لس قائمة متنوعة من المنتجات التي تجمع بين الأطعمة المفضلة والخيارات التي تراعي الاحتياجات الغذائية.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" data-stagger-parent data-stagger-delay="0.08">
+      
+      <div class="product-corp-card border-t-4 border-t-primary" data-stagger-child>
+        <div class="text-4xl mb-3">🍕</div>
+        <h3 class="text-lg font-black text-gray-900 mb-2" data-i18n="products.item1Title">البيتزا عالية البروتين</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="products.item1Desc">بيتزا بمفهوم مختلف، تجمع بين المذاق المعروف والتركيبة الغذائية المدروسة. ويصل محتوى البروتين في أحد منتجاتنا المميزة إلى 101 جرامًا.</p>
+      </div>
+
+      <div class="product-corp-card border-t-4 border-t-primary" data-stagger-child>
+        <div class="text-4xl mb-3">🍔</div>
+        <h3 class="text-lg font-black text-gray-900 mb-2" data-i18n="products.item2Title">البرجر والسندويتشات</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="products.item2Desc">خيارات متنوعة من البرجر والسندويتشات والشاورما، مع الاهتمام بالمكونات وطريقة التحضير المتوازنة.</p>
+      </div>
+
+      <div class="product-corp-card border-t-4 border-t-primary" data-stagger-child>
+        <div class="text-4xl mb-3">🥗</div>
+        <h3 class="text-lg font-black text-gray-900 mb-2" data-i18n="products.item3Title">الوجبات الطازجة</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="products.item3Desc">مجموعة من خيارات البروتين تشمل الدجاج واللحوم والأسماك، تقدم ضمن وجبات يومية متوازنة ومتكاملة.</p>
+      </div>
+
+      <div class="product-corp-card border-t-4 border-t-primary" data-stagger-child>
+        <div class="text-4xl mb-3">📅</div>
+        <h3 class="text-lg font-black text-gray-900 mb-2" data-i18n="products.item4Title">الاشتراكات الغذائية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="products.item4Desc">باقات وجبات منظمة تساعد العملاء على الالتزام بنمط غذائي يناسب أهدافهم واحتياجاتهم الصحية والرياضية.</p>
+      </div>
+
+      <div class="product-corp-card border-t-4 border-t-primary" data-stagger-child>
+        <div class="text-4xl mb-3">🍳</div>
+        <h3 class="text-lg font-black text-gray-900 mb-2" data-i18n="products.item5Title">الإفطار والسلطات</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="products.item5Desc">خيارات متنوعة للإفطار والوجبات الخفيفة والسلطات الطازجة الغنية بالمغذيات الحيوية.</p>
+      </div>
+
+      <div class="product-corp-card border-t-4 border-t-primary" data-stagger-child>
+        <div class="text-4xl mb-3">🍦</div>
+        <h3 class="text-lg font-black text-gray-900 mb-2" data-i18n="products.item6Title">الحلويات ومنتجات البروتين</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="products.item6Desc">مجموعة من الحلويات والمنتجات المبتكرة عالية البروتين، بما في ذلك آيس كريم البروتين المميز.</p>
+      </div>
+
+    </div>
+
+    <!-- Nutritional Disclaimer Banner -->
+    <div class="p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3.5 max-w-4xl mx-auto" data-animate>
+      <span class="text-amber-600 text-xl flex-shrink-0 mt-0.5">ℹ️</span>
+      <p class="text-amber-900 text-xs sm:text-sm leading-relaxed" data-i18n="products.disclaimer">تختلف القيم الغذائية حسب المنتج وحجم الحصة، ويتم عرض المعلومات الغذائية المعتمدة لكل صنف بصورة مستقلة.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     6. QUALITY & NUTRITION (الجودة والتغذية)
+     ============================================================ -->
+<section id="quality" class="section-py bg-gray-50">
+  <div class="container-custom">
+    <div class="text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit" data-i18n="quality.badge">الجودة والتغذية</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="quality.title">الجودة تبدأ من التفاصيل</h2>
+      <p class="text-gray-500 text-base sm:text-lg max-w-2xl mx-auto" data-i18n="quality.subtitle">في فت فور لس، نولي اهتمامًا بتطوير المنتجات ومراجعة مكوناتها وقيمها الغذائية، ونعمل على تقديم معلومات واضحة تساعد العملاء على اختيار ما يناسب احتياجاتهم.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" data-stagger-parent data-stagger-delay="0.08">
+      
+      <div class="corp-card flex items-start gap-4" data-stagger-child>
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-bold">
+          ✓
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 text-base mb-1" data-i18n="quality.pillar1">تطوير الوصفات والمنتجات</h4>
+          <p class="text-gray-500 text-sm">ابتكار منتجات تلبي متطلبات التغذية الرياضية والصحية.</p>
+        </div>
+      </div>
+
+      <div class="corp-card flex items-start gap-4" data-stagger-child>
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-bold">
+          ✓
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 text-base mb-1" data-i18n="quality.pillar2">مراجعة المكونات والأوزان بدقة</h4>
+          <p class="text-gray-500 text-sm">التدقيق في معايير التحضير وموازين المكونات الخام.</p>
+        </div>
+      </div>
+
+      <div class="corp-card flex items-start gap-4" data-stagger-child>
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-bold">
+          ✓
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 text-base mb-1" data-i18n="quality.pillar3">توثيق القيم الغذائية وفق البيانات المعتمدة</h4>
+          <p class="text-gray-500 text-sm">عرض الماكروز والسعرات بدقة وشفافية كاملة.</p>
+        </div>
+      </div>
+
+      <div class="corp-card flex items-start gap-4" data-stagger-child>
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-bold">
+          ✓
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 text-base mb-1" data-i18n="quality.pillar4">متابعة جودة وسلامة المواد الخام</h4>
+          <p class="text-gray-500 text-sm">انتقاء أفضل الموردين والالتزام بسلامة الغذاء.</p>
+        </div>
+      </div>
+
+      <div class="corp-card flex items-start gap-4" data-stagger-child>
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-bold">
+          ✓
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 text-base mb-1" data-i18n="quality.pillar5">توحيد إجراءات التحضير والتقديم في كافة المطابخ</h4>
+          <p class="text-gray-500 text-sm">معايير تشغيل موحدة تضمن نفس النكهة والجودة دائماً.</p>
+        </div>
+      </div>
+
+      <div class="corp-card flex items-start gap-4" data-stagger-child>
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 font-bold">
+          ✓
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 text-base mb-1" data-i18n="quality.pillar6">متابعة الأداء والرقابة التشغيلية المستمرة في الفروع</h4>
+          <p class="text-gray-500 text-sm">جولات رقابية لضمان ثبات مستوى الخدمة والرضا.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Summary Box -->
+    <div class="p-6 rounded-2xl bg-primary text-white text-center max-w-3xl mx-auto shadow-lg" data-animate>
+      <p class="font-bold text-base sm:text-lg leading-relaxed" data-i18n="quality.summary">هدفنا هو تقديم تجربة متسقة، يكون فيها المذاق والجودة والمعلومة الغذائية عناصر أساسية لا مساومة عليها.</p>
+    </div>
+
   </div>
 </section>
 
@@ -377,7 +680,7 @@
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12" data-animate>
       <div>
         <div class="section-label" data-i18n="menu.badge">استكشف المنيو</div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4" data-i18n="menu.title">كل ما تحتاجه في مكان واحد</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4" data-i18n="menu.title">كل ما تحتاجه في مكان واحد</h2>
         <p class="text-gray-500 text-lg mt-3 max-w-lg" data-i18n="menu.subtitle">منيو متكامل يناسب كل هدف غذائي — من البروتين الفريش للحلويات الصحية.</p>
       </div>
       <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer"
@@ -568,7 +871,7 @@
 
     <div class="text-center mb-14" data-animate>
       <div class="section-label mx-auto w-fit" data-i18n="subscriptions.badge">الاشتراكات الغذائية</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4" data-i18n="subscriptions.title">
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="subscriptions.title">
         خطّط لنظامك الغذائي
       </h2>
       <p class="text-gray-500 text-lg max-w-xl mx-auto" data-i18n="subscriptions.subtitle">
@@ -580,7 +883,7 @@
 
       <!-- 21 Day -->
       <div class="sub-card" data-scale-in>
-        <div class="text-5xl font-black text-gray-200 mb-2 font-latin">21</div>
+        <div class="text-4xl font-black text-gray-200 mb-2 font-latin">21</div>
         <div class="text-2xl font-bold text-gray-900 mb-1" data-i18n="subscriptions.dayUnit">يوم</div>
         <div class="text-primary font-semibold text-sm mb-4" data-i18n="subscriptions.planBasic">الخطة الأساسية</div>
         <div class="divider-green"></div>
@@ -607,7 +910,7 @@
       <!-- 24 Day – Featured -->
       <div class="sub-card featured" data-scale-in>
         <div class="sub-badge" data-i18n="subscriptions.popularBadge">⭐ الأكثر طلباً</div>
-        <div class="text-5xl font-black text-primary/20 mb-2 font-latin">24</div>
+        <div class="text-4xl font-black text-primary/20 mb-2 font-latin">24</div>
         <div class="text-2xl font-bold text-gray-900 mb-1" data-i18n="subscriptions.dayUnit">يوم</div>
         <div class="text-primary font-semibold text-sm mb-4" data-i18n="subscriptions.planAdv">الخطة المتقدمة</div>
         <div class="divider-green"></div>
@@ -637,7 +940,7 @@
 
       <!-- 28 Day -->
       <div class="sub-card" data-scale-in>
-        <div class="text-5xl font-black text-gray-200 mb-2 font-latin">28</div>
+        <div class="text-4xl font-black text-gray-200 mb-2 font-latin">28</div>
         <div class="text-2xl font-bold text-gray-900 mb-1" data-i18n="subscriptions.dayUnit">يوم</div>
         <div class="text-primary font-semibold text-sm mb-4" data-i18n="subscriptions.planFull">الخطة الشاملة</div>
         <div class="divider-green"></div>
@@ -678,7 +981,7 @@
 
     <div class="text-center mb-14" data-animate>
       <div class="section-label mx-auto w-fit" data-i18n="steps.badge">طريقة الطلب</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4" data-i18n="steps.title">3 خطوات وبس!</h2>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="steps.title">3 خطوات وبس!</h2>
       <p class="text-gray-500 text-lg" data-i18n="steps.subtitle">سهل وسريع — ابدأ رحلتك الصحية دلوقتي.</p>
     </div>
 
@@ -751,72 +1054,31 @@
 
 
 <!-- ============================================================
-     OUR STORY
-     ============================================================ -->
-<section id="story" class="section-py bg-white overflow-hidden">
-  <div class="container-custom">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-      <!-- Text -->
-      <div data-animate>
-        <div class="section-label" data-i18n="story.badge">قصتنا</div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-6" data-i18n="story.title">من الرياض للجميع</h2>
-        <p class="text-gray-600 text-lg leading-relaxed mb-6" data-i18n="story.p1">آمنّا إن الأكل الصحي ما لازم يكون ممل. بدأنا بفكرة بسيطة: نقدم الوجبات اللي الناس تحبها — زي البيتزا والبرجر والشاورما — بطريقة صحية ومكونات مختارة بعناية.</p>
-        <p class="text-gray-600 text-lg leading-relaxed mb-8" data-i18n="story.p2">
-          اليوم، نخدم آلاف العملاء في الرياض عبر 7 فروع واشتراكات يومية تناسب كل هدف غذائي.
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-1 bg-primary rounded-full"></div>
-          <span class="text-primary font-bold italic text-lg" data-i18n="story.quote">"أسلوبك الصحي بطريقة مختلفة"</span>
-        </div>
-      </div>
-
-      <!-- Stats -->
-      <div class="grid grid-cols-2 gap-5" data-stagger-parent data-stagger-delay="0.1">
-
-        <div class="stat-card border border-gray-100" data-stagger-child>
-          <div class="text-4xl font-black text-primary mb-1 font-latin" data-counter="7" data-suffix="+">7+</div>
-          <div class="text-gray-500 text-sm font-medium" data-i18n="story.stat1Lbl">فروع في الرياض</div>
-        </div>
-
-        <div class="stat-card bg-primary text-white" data-stagger-child>
-          <div class="text-4xl font-black mb-1 font-latin" data-counter="17" data-suffix="+">17+</div>
-          <div class="text-sm font-medium opacity-80" data-i18n="story.stat2Lbl">قسم في المنيو</div>
-        </div>
-
-        <div class="stat-card bg-gray-900 text-white" data-stagger-child>
-          <div class="text-4xl font-black mb-1 font-latin" data-counter="21">21</div>
-          <div class="text-sm font-medium opacity-70" data-i18n="story.stat3Lbl">يوم أقل اشتراك</div>
-        </div>
-
-        <div class="stat-card border border-gray-100" data-stagger-child>
-          <div class="text-4xl font-black text-primary mb-1">🏆</div>
-          <div class="text-gray-500 text-sm font-medium" data-i18n="story.stat4Lbl">تقييم ممتاز</div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     LOCATIONS
+     7. LOCATIONS (فروعنا وانتشارنا)
      ============================================================ -->
 <section id="locations" class="section-py bg-gray-50">
   <div class="container-custom">
 
     <div class="text-center mb-12" data-animate>
-      <div class="section-label mx-auto w-fit" data-i18n="locations.badge">فروعنا</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-4" data-i18n="locations.title">
-        7 فروع في الرياض
-      </h2>
-      <p class="text-gray-500 text-lg" data-i18n="locations.subtitle">قريب منك دائماً — ابحث عن أقرب فرع ليك.</p>
+      <div class="section-label mx-auto w-fit" data-i18n="locations.badge">فروعنا وانتشارنا</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="locations.title">حضور متنامٍ في مدينة الرياض</h2>
+      <p class="text-gray-500 text-base sm:text-lg max-w-3xl mx-auto" data-i18n="locations.subtitle">بدأت فت فور لس رحلتها في المملكة العربية السعودية، وواصلت توسيع حضورها من خلال افتتاح فروع جديدة في مواقع مختلفة بمدينة الرياض. لدينا حاليًا ستة فروع تشغيلية، ونعمل على تطوير شبكة انتشارنا بما يتيح الوصول إلى شرائح أكبر من العملاء.</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger-parent data-stagger-delay="0.08">
+    <!-- Operational Branches Heading -->
+    <div class="mb-6 flex items-center justify-between" data-animate>
+      <h3 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary"></span>
+        <span data-i18n="locations.operationalHeading">الفروع التشغيلية (6 فروع)</span>
+      </h3>
+      <span class="text-xs sm:text-sm text-gray-500 font-medium" data-i18n="locations.hoursNote">مواقع وساعات العمل متاحة عبر الخرائط</span>
+    </div>
 
-      <div class="branch-card" data-stagger-child>
+    <!-- 6 Operational Branches -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12" data-stagger-parent data-stagger-delay="0.08">
+
+      <!-- Branch 1: النسيم الشرقي -->
+      <div class="branch-card bg-white p-5 rounded-2xl border border-gray-200" data-stagger-child>
         <div class="flex items-start gap-3 mb-4">
           <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
@@ -824,7 +1086,7 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b1Name">النسيم الشرقي</h3>
+            <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b1Name">النسيم الشرقي</h4>
             <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b1Desc">شارع حسان بن ثابت، بجوار وقت اللياقة</p>
           </div>
         </div>
@@ -835,7 +1097,8 @@
         </a>
       </div>
 
-      <div class="branch-card" data-stagger-child>
+      <!-- Branch 2: حي الندوة -->
+      <div class="branch-card bg-white p-5 rounded-2xl border border-gray-200" data-stagger-child>
         <div class="flex items-start gap-3 mb-4">
           <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
@@ -843,18 +1106,19 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b2Name">الندوة</h3>
+            <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b2Name">حي الندوة</h4>
             <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b2Desc">طريق خريص، بجوار وقت اللياقة</p>
           </div>
         </div>
-        <a href="https://maps.google.com?q=فت+فور+لس+الندوة+الرياض" target="_blank" rel="noopener noreferrer"
+        <a href="https://maps.google.com?q=فت+فور+لس+حي+الندوة+الرياض" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          الاتجاهات
+          <span data-i18n="locations.directions">الاتجاهات</span>
         </a>
       </div>
 
-      <div class="branch-card" data-stagger-child>
+      <!-- Branch 3: الحمراء -->
+      <div class="branch-card bg-white p-5 rounded-2xl border border-gray-200" data-stagger-child>
         <div class="flex items-start gap-3 mb-4">
           <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
@@ -862,18 +1126,19 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b3Name">الحمراء</h3>
+            <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b3Name">الحمراء</h4>
             <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b3Desc">شارع خالد بن الوليد، بجوار بيور جيم</p>
           </div>
         </div>
         <a href="https://maps.google.com?q=فت+فور+لس+الحمراء+الرياض" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          الاتجاهات
+          <span data-i18n="locations.directions">الاتجاهات</span>
         </a>
       </div>
 
-      <div class="branch-card" data-stagger-child>
+      <!-- Branch 4: القادسية -->
+      <div class="branch-card bg-white p-5 rounded-2xl border border-gray-200" data-stagger-child>
         <div class="flex items-start gap-3 mb-4">
           <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
@@ -881,18 +1146,19 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b4Name">القادسية</h3>
+            <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b4Name">القادسية</h4>
             <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b4Desc">الطريق الدائري الشمالي، بجانب الصالة الاقتصادية</p>
           </div>
         </div>
         <a href="https://maps.google.com?q=فت+فور+لس+القادسية+الرياض" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          الاتجاهات
+          <span data-i18n="locations.directions">الاتجاهات</span>
         </a>
       </div>
 
-      <div class="branch-card" data-stagger-child>
+      <!-- Branch 5: قرطبة -->
+      <div class="branch-card bg-white p-5 rounded-2xl border border-gray-200" data-stagger-child>
         <div class="flex items-start gap-3 mb-4">
           <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
@@ -900,17 +1166,19 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b5Name">قرطبة</h3>
-            <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b5Desc">طريق الثمامة</p>
+            <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b5Name">قرطبة</h4>
+            <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b5Desc">طريق الثمامة، الرياض</p>
           </div>
         </div>
         <a href="https://maps.google.com?q=فت+فور+لس+قرطبة+الرياض" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          الاتجاهات
+          <span data-i18n="locations.directions">الاتجاهات</span>
         </a>
       </div>
-    <div class="branch-card" data-stagger-child>
+
+      <!-- Branch 6: المصيف -->
+      <div class="branch-card bg-white p-5 rounded-2xl border border-gray-200" data-stagger-child>
         <div class="flex items-start gap-3 mb-4">
           <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
@@ -918,33 +1186,251 @@
             </svg>
           </div>
           <div>
-            <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b6Name">المصيف</h3>
+            <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b6Name">المصيف</h4>
             <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b6Desc">حي المصيف، طريق الدائري الشمالي الفرعي</p>
           </div>
         </div>
         <a href="https://share.google/neW6tM67Ts3KxFZBN" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-2 text-primary text-sm font-semibold hover:underline cursor-pointer">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          الاتجاهات
+          <span data-i18n="locations.directions">الاتجاهات</span>
         </a>
       </div>
-    <div class="branch-card" data-stagger-child>
-  <div class="flex items-start gap-3 mb-4">
-    <div class="w-10 h-10 rounded-xl bg-primary-pale flex items-center justify-center flex-shrink-0">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#49973F" stroke-width="2.5" stroke-linecap="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-      </svg>
+
     </div>
-    <div>
-      <h3 class="font-bold text-gray-900 text-base" data-i18n="locations.b7Name">الريان</h3>
-      <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b7Desc">حي الريان، طريق خريص الفرعي، الرياض</p>
+
+    <!-- Upcoming Branches Heading -->
+    <div class="mb-6 flex items-center gap-2" data-animate>
+      <span class="w-3 h-3 rounded-full bg-amber-500 animate-pulse"></span>
+      <h3 class="text-xl font-bold text-gray-900" data-i18n="locations.upcomingHeading">فروع قريباً (قيد التجهيز)</h3>
+    </div>
+
+    <!-- 2 Upcoming Branches (السويدي والبيان) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5" data-stagger-parent data-stagger-delay="0.08">
+      
+      <!-- Branch 7: السويدي (قريباً) -->
+      <div class="branch-card bg-white p-5 rounded-2xl border-2 border-dashed border-amber-200" data-stagger-child>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 font-bold">
+              🏗️
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b7Name">السويدي</h4>
+              <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b7Desc">حي السويدي، الرياض</p>
+            </div>
+          </div>
+          <span class="badge-upcoming" data-i18n="locations.comingSoon">قريباً</span>
+        </div>
+        <div class="text-xs text-amber-700 font-medium">افتتاح مرتقب لتغطية المنطقة الجنوبية الغربية</div>
+      </div>
+
+      <!-- Branch 8: البيان (قريباً) -->
+      <div class="branch-card bg-white p-5 rounded-2xl border-2 border-dashed border-amber-200" data-stagger-child>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 font-bold">
+              🏗️
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-base" data-i18n="locations.b8Name">البيان</h4>
+              <p class="text-gray-500 text-sm mt-0.5" data-i18n="locations.b8Desc">حي البيان، الرياض</p>
+            </div>
+          </div>
+          <span class="badge-upcoming" data-i18n="locations.comingSoon">قريباً</span>
+        </div>
+        <div class="text-xs text-amber-700 font-medium">افتتاح مرتقب لتغطية المنطقة الشرقية</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     8. TEAM & GOVERNANCE (فريق العمل والهيكل الإداري)
+     ============================================================ -->
+<section id="team" class="section-py bg-white">
+  <div class="container-custom">
+    
+    <div class="max-w-4xl mx-auto text-center mb-14" data-animate>
+      <div class="section-label mx-auto w-fit" data-i18n="team.badge">فريق العمل والهيكل الإداري</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-4" data-i18n="team.title">فريق يصنع النمو</h2>
+      <p class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto" data-i18n="team.intro">نؤمن أن نجاح العمليات يعتمد على كفاءة الأشخاص الذين يقفون خلفها. ولذلك نعمل من خلال فريق يضم أكثر من 350 موظفًا، ضمن منظومة إدارية وتشغيلية تدعم إدارة الفروع وتطوير الأعمال.</p>
+    </div>
+
+    <!-- Management Structure -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10 items-stretch" data-animate>
+      
+      <!-- Top Management -->
+      <div class="lg:col-span-5 p-8 rounded-3xl bg-gradient-to-br from-[#111111] to-[#1e3a1b] text-white flex flex-col justify-between shadow-xl border border-primary/20">
+        <div>
+          <span class="text-primary-light text-xs font-bold tracking-wider uppercase block mb-3" data-i18n="team.topMgmtTitle">الإدارة العليا</span>
+          <h3 class="text-2xl font-black text-white mb-6">قيادة الرؤية والتوسع</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/10 backdrop-blur-md">
+              <span class="text-xl">👑</span>
+              <div>
+                <div class="font-bold text-white text-sm" data-i18n="team.roleOwner">المالك والمدير العام</div>
+                <div class="text-white/60 text-xs">التوجيه الاستراتيجي وحوكمة التوسع</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/10 backdrop-blur-md">
+              <span class="text-xl">💼</span>
+              <div>
+                <div class="font-bold text-white text-sm" data-i18n="team.roleExec">الإدارة التنفيذية</div>
+                <div class="text-white/60 text-xs">تنفيذ السياسات وإدارة التميز المؤسسي</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/70">
+          <span>هيكل حوكمة معتمد</span>
+          <span class="text-primary-light font-bold font-latin">+350 كادر</span>
+        </div>
+      </div>
+
+      <!-- Operational Departments -->
+      <div class="lg:col-span-7 flex flex-col justify-between">
+        <div>
+          <span class="text-primary font-bold text-sm tracking-wider uppercase block mb-3" data-i18n="team.opsMgmtTitle">الإدارات التشغيلية والإدارية</span>
+          <h3 class="text-2xl font-black text-gray-900 mb-5">تكامل المهام لدعم الفروع والعملاء</h3>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            
+            <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">01</div>
+              <span class="font-bold text-gray-800 text-sm" data-i18n="team.dept1">إدارة العمليات</span>
+            </div>
+
+            <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">02</div>
+              <span class="font-bold text-gray-800 text-sm" data-i18n="team.dept2">إدارة الموارد البشرية</span>
+            </div>
+
+            <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">03</div>
+              <span class="font-bold text-gray-800 text-sm" data-i18n="team.dept3">الإدارة المالية</span>
+            </div>
+
+            <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">04</div>
+              <span class="font-bold text-gray-800 text-sm" data-i18n="team.dept4">إدارة التسويق</span>
+            </div>
+
+            <div class="p-4 rounded-xl border border-gray-200 bg-gray-50 flex items-center gap-3 sm:col-span-2">
+              <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-xs">05</div>
+              <span class="font-bold text-gray-800 text-sm" data-i18n="team.dept5">إدارة المناطق والفروع</span>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="text-gray-500 text-xs sm:text-sm mt-5 leading-relaxed" data-i18n="team.summary">تعمل هذه الإدارات بصورة مترابطة لضمان التنسيق بين مختلف الوظائف وتحقيق أهداف الشركة التشغيلية والاستراتيجية.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     9. EXPANSION & GROWTH (التوسع والنمو)
+     ============================================================ -->
+<section id="expansion" class="section-py bg-gray-50">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <div class="lg:col-span-7" data-animate>
+        <div class="section-label" data-i18n="expansion.badge">التوسع والنمو</div>
+        <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-gray-900 mt-4 mb-6 leading-tight" data-i18n="expansion.title">نموذج تشغيلي قابل للتوسع دوليًا</h2>
+        
+        <div class="space-y-4 text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+          <p data-i18n="expansion.p1">نؤمن أن النمو المستدام يبدأ ببناء نموذج أعمال قوي، ومنظومة تشغيلية متكاملة، ومعايير واضحة تضمن جودة المنتجات وكفاءة الأداء.</p>
+          <p data-i18n="expansion.p2">نعمل باستمرار على تطوير نموذجنا التشغيلي وتعزيز قدراتنا الإدارية والتقنية، بما يدعم التوسع الجغرافي وافتتاح فروع جديدة في أسواق مختلفة.</p>
+          <p data-i18n="expansion.p3">وتتمثل رؤيتنا في بناء علامة تجارية ذات حضور دولي، تستند إلى خبرة تشغيلية، ومنتجات متنوعة، ونظام عمل قابل للتطوير والتكيف مع متطلبات الأسواق المختلفة.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-primary-pale border border-primary/20 text-primary-dark font-bold text-sm sm:text-base flex items-center gap-3">
+          <span class="text-xl">🌍</span>
+          <span data-i18n="expansion.target">نطمح إلى نقل تجربة فت فور لس إلى أسواق جديدة، مع الحفاظ على هويتنا ومعايير الجودة وتجربة العميل.</span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5" data-animate>
+        <div class="p-8 rounded-3xl bg-white border border-gray-200 shadow-xl space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl font-bold">
+              📈
+            </div>
+            <div>
+              <div class="text-xs text-gray-500 font-bold uppercase">الانتشار الجغرافي</div>
+              <div class="text-xl font-black text-gray-900">المملكة والأسواق المستهدفة</div>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-4 border-t border-gray-100">
+            <div class="flex items-center justify-between text-sm py-1.5">
+              <span class="text-gray-600">مدينة الرياض (المركز الرئيسي)</span>
+              <span class="font-bold text-primary font-latin">6 فروع + 2 قريباً</span>
+            </div>
+            <div class="flex items-center justify-between text-sm py-1.5">
+              <span class="text-gray-600">سلاسل الإمداد المركزية</span>
+              <span class="font-bold text-gray-900 font-latin">جاهزية 100%</span>
+            </div>
+            <div class="flex items-center justify-between text-sm py-1.5">
+              <span class="text-gray-600">بنية الاشتراكات والتطبيقات</span>
+              <span class="font-bold text-gray-900 font-latin">منظومة سحابية</span>
+            </div>
+            <div class="flex items-center justify-between text-sm py-1.5">
+              <span class="text-gray-600">التوسع الإقليمي والدولي</span>
+              <span class="font-bold text-primary-dark">وفق نموذج الامتياز والتشغيل</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-  <span class="inline-flex items-center gap-2 text-primary text-sm font-semibold">
-    <span class="w-2 h-2 rounded-full bg-primary"></span>
-    <span data-i18n="locations.comingSoon">قريباً</span>
-  </span>
-</div>
+</section>
+
+
+<!-- ============================================================
+     10. PARTNERSHIPS & CONTACT (الشراكات والتواصل)
+     ============================================================ -->
+<section id="partnerships" class="section-py bg-white">
+  <div class="container-custom">
+    <div class="p-8 sm:p-12 lg:p-16 rounded-3xl bg-gradient-to-br from-[#111111] via-[#1a2e18] to-[#111111] text-white border border-primary/30 shadow-2xl relative overflow-hidden" data-animate>
+      
+      <!-- Decorative circle glow -->
+      <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-3xl relative z-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold mb-4" data-i18n="partnerships.badge">الشراكات والتواصل</div>
+        <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-white mb-6 leading-tight" data-i18n="partnerships.title">نؤمن بقوة الشراكات</h2>
+        <p class="text-white/85 text-base sm:text-lg leading-relaxed mb-4" data-i18n="partnerships.desc">نرحب بالتواصل مع المستثمرين والشركاء وأصحاب العقارات والجهات المهتمة بالتعاون معنا في تطوير أعمالنا وتوسيع نطاق حضورنا.</p>
+        <p class="text-white/60 text-sm sm:text-base leading-relaxed mb-8" data-i18n="partnerships.note">للاستفسارات التجارية والشراكات وفرص التعاون، يمكنكم التواصل معنا عبر قنوات الاتصال الرسمية.</p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%86%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AD%D8%AB%20%D9%81%D8%B1%D8%B5%D8%A9%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%AA%20%D9%81%D9%88%D8%B1%20%D9%84%D8%B3" target="_blank" rel="noopener noreferrer"
+             class="btn-primary text-base px-8 py-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            <span data-i18n="partnerships.contactBtn">تواصل معنا</span>
+          </a>
+
+          <a href="tel:0114516498" class="btn-secondary text-base px-8 py-4">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="font-latin">0114516498</span>
+          </a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -964,7 +1450,7 @@
           <span class="w-5 h-0.5 bg-primary-light rounded-full"></span>
           <span data-i18n="app.badge">متاح على iOS و Android</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5">
+        <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black text-white mb-5">
           <span data-i18n="app.title1">اطلب من التطبيق</span><br/>
           <span class="text-gradient-green" data-i18n="app.title2">بضغطة واحدة</span>
         </h2>
@@ -1163,75 +1649,96 @@
 <!-- ============================================================
      FOOTER
      ============================================================ -->
+<!-- ============================================================
+     11. FOOTER (التذييل)
+     ============================================================ -->
 <footer style="background:#111111;">
   <div class="container-custom py-12 lg:py-16">
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
 
-      <!-- Brand -->
-      <div class="md:col-span-2">
+      <!-- Brand & Mission -->
+      <div class="md:col-span-5">
         <div class="flex items-center gap-2 mb-4">
-          <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-12 w-auto object-contain" />
+          <img src="assets/images/logo-white.png" alt="Fit for Less Logo" class="h-12 w-auto object-contain" />
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs" data-i18n="footer.aboutText">
-          أسلوبك الصحي بطريقة مختلفة. وجبات صحية لذيذة واشتراكات غذائية مرنة في الرياض.
+        <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm" data-i18n="footer.brandDesc">
+          شركة سعودية تأسست عام 2021، متخصصة في قطاع المطاعم والأغذية الصحية.
         </p>
-        <!-- Social links -->
-        <div class="flex items-center gap-3">
-          <a href="https://www.instagram.com/fit4less.ksa/" target="_blank" rel="noopener noreferrer"
-             class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-          </a>
-          <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit4Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer"
-             class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[#25D366] transition-colors cursor-pointer" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-            </svg>
-          </a>
+
+        <!-- Social Media Icons (TikTok, Snapchat, Instagram, X) -->
+        <div>
+          <span class="text-xs text-white/50 font-bold uppercase tracking-wider block mb-3" data-i18n="footer.socialTitle">تابعنا على قنواتنا الرسمية</span>
+          <div class="flex items-center gap-2.5">
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@fit4less.ksa" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" aria-label="TikTok" title="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.42a6.34 6.34 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z"/>
+              </svg>
+            </a>
+            <!-- Snapchat -->
+            <a href="https://www.snapchat.com/@fit4less.ksa?share_id=1Sq6EPSiQvSja8EHooNEcA&locale=en_US&sid=80315fb09164428c82c60ee9365ad69d" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" aria-label="Snapchat" title="Snapchat">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.065 2c-3.784 0-5.748 2.657-5.748 5.275 0 1.053.407 2.052.88 2.884-.132.32-.472.484-.877.585-.436.109-.92.146-1.391.56-.37.327-.478.79-.276 1.189.261.515.864.833 1.838.97.106.377.062.887-.034 1.344-.131.625-.49 1.127-1.122 1.568-.456.319-.884.776-.714 1.378.183.649.923.957 2.296.957.51 0 1.118-.046 1.78-.135.617-.083 1.258-.236 1.902.327.702.613 1.15 1.078 1.466 1.078.315 0 .764-.465 1.465-1.078.645-.563 1.286-.41 1.903-.327.662.089 1.27.135 1.78.135 1.373 0 2.113-.308 2.296-.957.17-.602-.258-1.059-.714-1.378-.632-.441-.991-.943-1.122-1.568-.096-.457-.14-.967-.034-1.344.974-.137 1.577-.455 1.838-.97.202-.399.094-.862-.276-1.189-.471-.414-.955-.451-1.391-.56-.405-.101-.745-.265-.877-.585.473-.832.88-1.831.88-2.884C17.813 4.657 15.85 2 12.065 2z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/fit4less.ksa" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://x.com/Fit4less22" target="_blank" rel="noopener noreferrer"
+               class="social-icon-btn" aria-label="X (Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Links -->
-      <div>
+      <!-- Quick Links (Corporate Sections) -->
+      <div class="md:col-span-4">
         <h4 class="text-white font-bold text-sm mb-4" data-i18n="footer.quickLinksTitle">روابط سريعة</h4>
-        <ul class="space-y-2.5">
-          <li><a href="#menu"          class="footer-link text-sm" data-i18n="nav.menu">المنيو</a></li>
-          <li><a href="#subscriptions" class="footer-link text-sm" data-i18n="nav.subscriptions">الاشتراكات</a></li>
-          <li><a href="#locations"     class="footer-link text-sm" data-i18n="nav.locations">فروعنا</a></li>
-          <li><a href="#story"         class="footer-link text-sm" data-i18n="nav.story">قصتنا</a></li>
-          <li><a href="#app"           class="footer-link text-sm" data-i18n="nav.app">التطبيق</a></li>
-        </ul>
+        <div class="grid grid-cols-2 gap-y-2.5 gap-x-4">
+          <div><a href="#hero"           class="footer-link text-sm" data-i18n="footer.navHome">الرئيسية</a></div>
+          <div><a href="#about"          class="footer-link text-sm" data-i18n="footer.navAbout">من نحن</a></div>
+          <div><a href="#business-model" class="footer-link text-sm" data-i18n="footer.navModel">نموذج أعمالنا</a></div>
+          <div><a href="#products"       class="footer-link text-sm" data-i18n="footer.navProducts">منتجاتنا وخدماتنا</a></div>
+          <div><a href="#quality"        class="footer-link text-sm" data-i18n="footer.navQuality">الجودة والتغذية</a></div>
+          <div><a href="#locations"      class="footer-link text-sm" data-i18n="footer.navBranches">فروعنا</a></div>
+          <div><a href="#team"           class="footer-link text-sm" data-i18n="footer.navTeam">فريق العمل</a></div>
+          <div><a href="#expansion"      class="footer-link text-sm" data-i18n="footer.navExpansion">التوسع والنمو</a></div>
+          <div><a href="#partnerships"   class="footer-link text-sm" data-i18n="footer.navContact">تواصل معنا</a></div>
+        </div>
       </div>
 
-      <!-- Contact -->
-      <div>
+      <!-- Contact & Customer Care -->
+      <div class="md:col-span-3">
         <h4 class="text-white font-bold text-sm mb-4" data-i18n="footer.contactTitle">تواصل معنا</h4>
         <ul class="space-y-3">
           <li>
             <a href="tel:0114516498" class="footer-link text-sm flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              0114516498
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="font-bold text-white font-latin" data-i18n="footer.phoneLabel">الرقم الموحد: 0114516498</span>
             </a>
           </li>
           <li>
-            <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit4Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D9%81%D8%AA%20%D9%81%D9%88%D8%B1%20%D9%84%D8%B3%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
               </svg>
               <span data-i18n="footer.whatsappContact">واتساب خدمة العملاء</span>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/fit4less.ksa/" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              @fit4less.ksa
-            </a>
-          </li>
-          <li>
             <a href="https://fit4less.net" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               fit4less.net
             </a>
           </li>
@@ -1242,8 +1749,8 @@
 
     <!-- Bottom bar -->
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
-      <p class="text-gray-500 text-sm">
-        © 2024 Fit4Less. <span data-i18n="footer.rights">جميع الحقوق محفوظة.</span>
+      <p class="text-gray-400 text-sm font-medium" data-i18n="footer.rights">
+        © فت فور لس جميع الحقوق محفوظة
       </p>
       <div class="flex items-center gap-4">
         <a href="https://apps.apple.com/sa/app/id6469492605" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">App Store</a>
