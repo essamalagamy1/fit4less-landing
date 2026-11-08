@@ -17,7 +17,7 @@
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" type="image/png" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css?v=2.2" />
+  <link rel="stylesheet" href="assets/css/custom.css?v=2.3" />
 
   <!-- Tailwind Config -->
   <script>
@@ -1009,27 +1009,40 @@
             </div>
             <!-- App screen -->
             <div class="flex-1 bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col items-center justify-center p-6 text-center">
-              <div class="w-16 h-16 rounded-2xl bg-black p-2.5 flex items-center justify-center mb-4 shadow-lg border border-white/10">
+              <div class="w-16 h-16 rounded-2xl bg-black p-2.5 flex items-center justify-center mb-3 shadow-lg border border-white/10">
                 <img src="assets/images/logo-white.png" alt="Fit4Less App Icon" class="w-full h-full object-contain" />
               </div>
               <div class="text-white font-bold text-xl mb-1">Fit<span class="text-primary-light">4</span>Less</div>
-              <div class="text-white/50 text-xs mb-8" data-i18n="app.slogan">أسلوبك الصحي بطريقة مختلفة</div>
+              <div class="text-white/50 text-xs mb-3" data-i18n="app.slogan">أسلوبك الصحي بطريقة مختلفة</div>
+
+              <!-- In-App Rating Banner (Inside Phone Screen) -->
+              <div class="w-full bg-white/10 backdrop-blur-md rounded-xl py-2 px-3 mb-3 flex items-center justify-between text-start border border-white/10">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm">⭐</span>
+                  <div>
+                    <div class="text-white font-bold text-[11px]" data-i18n="app.ratingTitle">تقييم ممتاز 4.9</div>
+                    <div class="text-white/50 text-[9px]" data-i18n="app.ratingSub">App Store & Google Play</div>
+                  </div>
+                </div>
+                <span class="text-primary-light text-xs font-bold font-latin">4.9 ★</span>
+              </div>
+
               <!-- Mock cards -->
               <div class="w-full space-y-2">
                 <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-sm">
+                  <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-sm flex-shrink-0">
                    <img src="assets/images/thumbnail.jpeg" alt="Fit4Less Meal" class="w-full h-full object-cover rounded-full select-none" />
                   </div>
-                  <div class="text-right flex-1">
+                  <div class="text-start flex-1">
                     <div class="text-white text-xs font-semibold" data-i18n="app.dish1Title">بيتزا بروتين</div>
                     <div class="text-white/40 text-[10px]" data-i18n="app.dish1Prot">101جم بروتين</div>
                   </div>
                 </div>
                 <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-sm">
+                  <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center text-sm flex-shrink-0">
                   <img src="assets/images/thumbnail (1).jpeg" alt="Fit4Less Meal" class="w-full h-full object-cover rounded-full select-none" />
                   </div>
-                  <div class="text-right flex-1">
+                  <div class="text-start flex-1">
                     <div class="text-white text-xs font-semibold" data-i18n="app.dish2Title">برجر لحم صحي</div>
                     <div class="text-white/40 text-[10px]" data-i18n="app.dish2Prot">39جم بروتين</div>
                   </div>
@@ -1042,14 +1055,6 @@
             <!-- Home indicator -->
             <div class="h-6 bg-black/40 flex items-center justify-center flex-shrink-0">
               <div class="w-20 h-1 bg-white/30 rounded-full"></div>
-            </div>
-          </div>
-          <!-- Floating badge -->
-          <div class="absolute -right-4 top-16 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2">
-            <div class="text-lg">⭐</div>
-            <div>
-              <div class="text-gray-900 font-bold text-xs">تقييم ممتاز</div>
-              <div class="text-gray-400 text-[10px]">App Store & Play</div>
             </div>
           </div>
         </div>
@@ -1275,11 +1280,11 @@
      ============================================================ -->
 
 <!-- Translations Dictionary -->
-<script src="assets/js/translations.js?v=2.2"></script>
+<script src="assets/js/translations.js?v=2.3"></script>
 <!-- Motion.dev (vanilla JS) -->
 <script src="https://cdn.jsdelivr.net/npm/motion@11/dist/motion.min.js"></script>
 <!-- Main App Script -->
-<script src="assets/js/main.js?v=2.2"></script>
+<script src="assets/js/main.js?v=2.3"></script>
 
 </body>
 </html>

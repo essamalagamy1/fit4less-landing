@@ -176,7 +176,9 @@ window.translations = {
       dish1Prot: "101جم بروتين",
       dish2Title: "برجر لحم صحي",
       dish2Prot: "39جم بروتين",
-      orderNowMock: "اطلب الآن"
+      orderNowMock: "اطلب الآن",
+      ratingTitle: "تقييم ممتاز 4.9",
+      ratingSub: "App Store & Google Play"
     },
     faq: {
       badge: "الأسئلة الشائعة",
@@ -381,7 +383,9 @@ window.translations = {
       dish1Prot: "101g Protein",
       dish2Title: "Healthy Beef Burger",
       dish2Prot: "39g Protein",
-      orderNowMock: "Order Now"
+      orderNowMock: "Order Now",
+      ratingTitle: "Top Rated 4.9",
+      ratingSub: "App Store & Google Play"
     },
     faq: {
       badge: "Frequently Asked Questions",
