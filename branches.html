@@ -47,6 +47,27 @@
 <body class="font-arabic antialiased bg-gray-50 text-gray-900">
 
 <!-- ============================================================
+     CREATIVE PAGE TRANSITION LOADER
+     ============================================================ -->
+<div id="page-loader" aria-hidden="true">
+  <div class="loader-content">
+    <div class="loader-ring-wrapper">
+      <div class="loader-pulse"></div>
+      <div class="loader-ring"></div>
+      <img src="assets/images/logo.png" alt="Fit for Less" class="loader-logo" />
+    </div>
+    <div class="loader-brand">
+      <span class="loader-title font-latin">Fit<span class="text-primary-light">4</span>Less</span>
+      <span class="loader-subtitle" data-i18n="app.slogan">أسلوبك الصحي بطريقة مختلفة</span>
+      <div class="loader-bar-bg">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
      NAVBAR WITH BILINGUAL SWITCHER
      ============================================================ -->
 <!-- ============================================================
@@ -275,13 +296,14 @@
           </div>
         </div>
 
-        <!-- Map Iframe -->
+        <!-- Map Iframe (Google Maps) -->
         <div class="map-embed-wrapper h-[420px]">
           <iframe id="branch-map-frame"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=46.8122%2C24.7014%2C46.8522%2C24.7414&layer=mapnik&marker=24.7214%2C46.8322"
+            src="https://maps.google.com/maps?q=24.7214,46.8322&hl=ar&z=15&output=embed"
             class="w-full h-full border-0"
             loading="lazy"
-            title="خريطة فرع فت فور لس"></iframe>
+            referrerpolicy="no-referrer-when-downgrade"
+            title="خريطة فرع فت فور لس - خرائط Google"></iframe>
         </div>
 
       </div>

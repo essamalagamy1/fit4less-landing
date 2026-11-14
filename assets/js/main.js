@@ -306,7 +306,7 @@
       lng: 46.8322,
       phone: '0114516498',
       mapUrl: 'https://maps.google.com?q=فت+فور+لس+النسيم+الشرقي+الرياض',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.8122%2C24.7014%2C46.8522%2C24.7414&layer=mapnik&marker=24.7214%2C46.8322'
+      embedUrl: 'https://maps.google.com/maps?q=24.7214,46.8322&hl=ar&z=15&output=embed'
     },
     {
       id: 'nadwa',
@@ -318,7 +318,7 @@
       lng: 46.8831,
       phone: '0114516498',
       mapUrl: 'https://maps.google.com?q=فت+فور+لس+حي+الندوة+الرياض',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.8631%2C24.7676%2C46.9031%2C24.8076&layer=mapnik&marker=24.7876%2C46.8831'
+      embedUrl: 'https://maps.google.com/maps?q=24.7876,46.8831&hl=ar&z=15&output=embed'
     },
     {
       id: 'hamra',
@@ -330,7 +330,7 @@
       lng: 46.7562,
       phone: '0114516498',
       mapUrl: 'https://maps.google.com?q=فت+فور+لس+الحمراء+الرياض',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7362%2C24.7594%2C46.7762%2C24.7994&layer=mapnik&marker=24.7794%2C46.7562'
+      embedUrl: 'https://maps.google.com/maps?q=24.7794,46.7562&hl=ar&z=15&output=embed'
     },
     {
       id: 'qadisiyyah',
@@ -342,7 +342,7 @@
       lng: 46.8123,
       phone: '0114516498',
       mapUrl: 'https://maps.google.com?q=فت+فور+لس+القادسية+الرياض',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7923%2C24.7942%2C46.8323%2C24.8342&layer=mapnik&marker=24.8142%2C46.8123'
+      embedUrl: 'https://maps.google.com/maps?q=24.8142,46.8123&hl=ar&z=15&output=embed'
     },
     {
       id: 'qurtubah',
@@ -354,7 +354,7 @@
       lng: 46.7328,
       phone: '0114516498',
       mapUrl: 'https://maps.google.com?q=فت+فور+لس+قرطبة+الرياض',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7128%2C24.7935%2C46.7528%2C24.8335&layer=mapnik&marker=24.8135%2C46.7328'
+      embedUrl: 'https://maps.google.com/maps?q=24.8135,46.7328&hl=ar&z=15&output=embed'
     },
     {
       id: 'maseef',
@@ -366,19 +366,19 @@
       lng: 46.6853,
       phone: '0114516498',
       mapUrl: 'https://share.google/neW6tM67Ts3KxFZBN',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.6653%2C24.7461%2C46.7053%2C24.7861&layer=mapnik&marker=24.7661%2C46.6853'
+      embedUrl: 'https://maps.google.com/maps?q=24.7661,46.6853&hl=ar&z=15&output=embed'
     },
     {
       id: 'rayan',
       nameAr: 'فرع الريان',
       nameEn: 'Al-Rayan Branch',
       descAr: 'شارع الإمام الشافعي، حي الريان',
-      descEn: 'Al-Imam Al-Shafi\'i St., Al-Rayan District',
+      descEn: "Al-Imam Al-Shafi'i St., Al-Rayan District",
       lat: 24.7153,
       lng: 46.7791,
       phone: '0114516498',
       mapUrl: 'https://maps.app.goo.gl/J1G3bMkA7Qv3gsLn6',
-      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7591%2C24.6953%2C46.7991%2C24.7353&layer=mapnik&marker=24.7153%2C46.7791'
+      embedUrl: 'https://maps.google.com/maps?q=24.7153,46.7791&hl=ar&z=15&output=embed'
     }
   ];
 
@@ -410,8 +410,11 @@
     if (descEl) descEl.textContent = isAr ? branch.descAr : branch.descEn;
     if (dirBtn) dirBtn.setAttribute('href', branch.mapUrl);
     if (callBtn) callBtn.setAttribute('href', `tel:${branch.phone}`);
-    if (mapIframe && mapIframe.src !== branch.embedUrl) {
-      mapIframe.src = branch.embedUrl;
+    if (mapIframe) {
+      const googleEmbed = branch.embedUrl.replace('hl=ar', isAr ? 'hl=ar' : 'hl=en');
+      if (mapIframe.src !== googleEmbed) {
+        mapIframe.src = googleEmbed;
+      }
     }
   }
 
@@ -543,6 +546,100 @@
     document.querySelectorAll('[data-animate], [data-hero-animate], [data-stagger-child], [data-scale-in]').forEach((el) => {
       el.style.opacity = '1';
       el.style.transform = 'none';
+    });
+  }
+
+  // ------------------------------------------------------------
+  // Subscription Duration Tabs
+  // ------------------------------------------------------------
+  const subTabButtons = document.querySelectorAll('.sub-tab-btn');
+  const subTabPanels = document.querySelectorAll('.sub-tab-panel');
+
+  if (subTabButtons.length > 0 && subTabPanels.length > 0) {
+    subTabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetDays = btn.getAttribute('data-target-tab');
+
+        // Update button states
+        subTabButtons.forEach((b) => {
+          const isActive = b === btn;
+          b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          if (isActive) {
+            b.classList.remove('text-gray-600', 'hover:text-gray-900');
+            b.classList.add('bg-primary', 'text-white', 'shadow-md');
+          } else {
+            b.classList.remove('bg-primary', 'text-white', 'shadow-md');
+            b.classList.add('text-gray-600', 'hover:text-gray-900');
+          }
+        });
+
+        // Show matching panel
+        subTabPanels.forEach((panel) => {
+          if (panel.id === `sub-panel-${targetDays}`) {
+            panel.classList.remove('hidden');
+            // Ensure animated children are visible
+            panel.querySelectorAll('[data-scale-in], [data-animate]').forEach((child) => {
+              child.style.opacity = '1';
+              child.style.transform = 'none';
+            });
+          } else {
+            panel.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+
+  // ------------------------------------------------------------
+  // Creative Page Transition Loader
+  // ------------------------------------------------------------
+  const pageLoader = document.getElementById('page-loader');
+  if (pageLoader) {
+    const hideLoader = () => {
+      pageLoader.classList.add('loader-hidden');
+    };
+
+    // Hide loader when DOM is ready or after brief transition
+    if (document.readyState === 'complete') {
+      setTimeout(hideLoader, 200);
+    } else {
+      window.addEventListener('load', () => setTimeout(hideLoader, 200));
+      // Fallback safeguard in case window.load hangs
+      setTimeout(hideLoader, 1500);
+    }
+
+    // Intercept clicks on links leading to other internal pages
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      const target = link.getAttribute('target');
+
+      // Skip anchors, empty links, external targets, and javascript
+      if (!href || href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('https://wa.me')) {
+        return;
+      }
+      if (target === '_blank') return;
+
+      // Check if it's an internal HTML link or same-origin link
+      const isInternal = href.endsWith('.html') || (!href.includes('://') && !href.startsWith('//'));
+      if (isInternal) {
+        // Prevent instant jump, show loader, then navigate
+        e.preventDefault();
+        pageLoader.classList.remove('loader-hidden');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 220);
+      }
+    });
+
+    // Handle browser back/forward cache (pageshow)
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        hideLoader();
+      }
     });
   }
 
