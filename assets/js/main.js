@@ -128,10 +128,11 @@
 
 
   /* ============================================================
-     2. NAVBAR SCROLL & ACTIVE SECTION HIGHLIGHT
+     2. NAVBAR SCROLL & ACTIVE PAGE/SECTION HIGHLIGHT
      ============================================================ */
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
+  const mobileNavLinks = document.querySelectorAll('#mobile-menu nav a');
   const sections = document.querySelectorAll('section[id]');
 
   function handleNavbarScroll() {
@@ -145,26 +146,53 @@
   window.addEventListener('scroll', handleNavbarScroll, { passive: true });
   handleNavbarScroll();
 
-  function highlightNav() {
-    const scrollPos = window.scrollY + 120;
-    sections.forEach((sec) => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach((link) => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('text-primary-light');
-            link.classList.remove('text-white/80');
-          } else {
-            link.classList.remove('text-primary-light');
-            link.classList.add('text-white/80');
-          }
-        });
+  function highlightActiveNavigation() {
+    const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+    const currentFile = (rawPath === '' || rawPath === '/') ? 'index.html' : rawPath;
+    const isIndexPage = currentFile === 'index.html';
+
+    // 1. Highlight dedicated page links
+    [...navLinks, ...mobileNavLinks].forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const filePart = href.split('#')[0].split('?')[0];
+
+      if (!isIndexPage && filePart === currentFile && !href.includes('#')) {
+        link.classList.add('text-primary-light', 'font-bold');
+        link.classList.remove('text-white/85');
+      } else if (isIndexPage && !href.includes('#') && (filePart === 'index.html' || filePart === '')) {
+        link.classList.add('text-primary-light', 'font-bold');
+        link.classList.remove('text-white/85');
+      } else {
+        link.classList.remove('text-primary-light');
+        if (!link.classList.contains('font-bold')) {
+          link.classList.add('text-white/85');
+        }
       }
     });
+
+    // 2. On index page, highlight in-view hash sections
+    if (isIndexPage) {
+      const scrollPos = window.scrollY + 140;
+      sections.forEach((sec) => {
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        if (id && scrollPos >= top && scrollPos < top + height) {
+          navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (href === `#${id}` || href === `index.html#${id}`) {
+              navLinks.forEach((l) => l.classList.remove('text-primary-light'));
+              link.classList.add('text-primary-light');
+            }
+          });
+        }
+      });
+    }
   }
-  window.addEventListener('scroll', highlightNav, { passive: true });
+
+  window.addEventListener('scroll', highlightActiveNavigation, { passive: true });
+  highlightActiveNavigation();
 
 
   /* ============================================================
@@ -210,25 +238,42 @@
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1280 && mobileMenu && mobileMenu.classList.contains('visible')) {
+    if (window.innerWidth >= 1024 && mobileMenu && mobileMenu.classList.contains('visible')) {
       closeMenu();
     }
   });
 
 
   /* ============================================================
-     4. SMOOTH SCROLLING
+     4. SMOOTH SCROLLING (ANCHORS & CROSS-PAGE ANCHORS)
      ============================================================ */
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  document.querySelectorAll('a[href*="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      if (!href || href === '#') return;
-      const target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      const offset = (navbar ? navbar.offsetHeight : 70) + 12;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      if (!href || href === '#' || href.startsWith('http') || href.startsWith('tel:') || href.startsWith('mailto:')) return;
+
+      const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+      const isIndexPage = (rawPath === '' || rawPath === '/' || rawPath === 'index.html');
+      const hashIndex = href.indexOf('#');
+
+      if (hashIndex !== -1) {
+        const pagePart = href.substring(0, hashIndex);
+        const hashPart = href.substring(hashIndex);
+
+        if (hashPart && hashPart !== '#') {
+          // If already on index page and clicking index.html#section or #section
+          if (pagePart === '' || (isIndexPage && (pagePart === 'index.html' || pagePart === './index.html'))) {
+            const target = document.querySelector(hashPart);
+            if (target) {
+              e.preventDefault();
+              const offset = (navbar ? navbar.offsetHeight : 70) + 12;
+              const top = target.getBoundingClientRect().top + window.scrollY - offset;
+              window.scrollTo({ top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+              history.pushState(null, '', hashPart);
+            }
+          }
+        }
+      }
     });
   });
 

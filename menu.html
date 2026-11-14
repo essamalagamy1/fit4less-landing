@@ -49,27 +49,30 @@
 <!-- ============================================================
      NAVBAR WITH BILINGUAL SWITCHER
      ============================================================ -->
-<header id="navbar" class="fixed top-0 right-0 left-0 z-50 bg-[#111111]/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+<!-- ============================================================
+     GLOBAL UNIFIED NAVBAR
+     ============================================================ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-[1000] transition-all duration-300">
   <div class="container-custom">
-    <div class="flex items-center justify-between h-16 lg:h-20">
-      
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="الصفحة الرئيسية فت فور لس">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="فت فور لس | Fit for Less">
         <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-10 sm:h-12 w-auto object-contain" />
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden xl:flex items-center gap-6">
-        <a href="index.html" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.home">الرئيسية</a>
-        <a href="about.html" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.about">من نحن</a>
-        <a href="menu.html" class="text-primary-light font-bold text-sm" data-i18n="nav.menu">المنيو والأسعار</a>
-        <a href="branches.html" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.locations">فروعنا</a>
-        <a href="index.html#subscriptions" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
-        <a href="index.html#partnerships" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.partnerships">الشراكات المؤسسية</a>
+      <nav class="hidden lg:flex items-center gap-6">
+        <a href="index.html" class="nav-link text-white/85 text-sm font-semibold hover:text-white transition-colors" data-i18n="nav.home">الرئيسية</a>
+        <a href="about.html" class="nav-link text-white/85 text-sm font-semibold hover:text-white transition-colors" data-i18n="nav.about">عن الشركة</a>
+        <a href="menu.html" class="nav-link text-white/85 text-sm font-semibold hover:text-white transition-colors" data-i18n="nav.menu">المنيو والأسعار</a>
+        <a href="branches.html" class="nav-link text-white/85 text-sm font-semibold hover:text-white transition-colors" data-i18n="nav.locations">فروعنا</a>
+        <a href="index.html#subscriptions" class="nav-link text-white/85 text-sm font-semibold hover:text-white transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
+        <a href="index.html#partnerships" class="nav-link text-white/85 text-sm font-semibold hover:text-white transition-colors" data-i18n="nav.partnerships">الشراكات المؤسسية</a>
       </nav>
 
-      <!-- Action & Language Buttons -->
-      <div class="flex items-center gap-3">
+      <!-- CTA + Lang + Hamburger -->
+      <div class="flex items-center gap-2 sm:gap-3">
         <!-- Language Switcher Button -->
         <button id="lang-toggle-btn" class="lang-btn" aria-label="Switch Language / تبديل اللغة" title="Switch Language / تبديل اللغة">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -80,6 +83,7 @@
           <span class="lang-label">English</span>
         </button>
 
+        <!-- Direct Action Buttons -->
         <a href="tel:0114516498" class="btn-secondary text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 hidden md:inline-flex" data-i18n="nav.callUs">
           اتصل بنا
         </a>
@@ -88,7 +92,7 @@
         </a>
 
         <!-- Mobile Menu Trigger -->
-        <button id="menu-btn" class="xl:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer border border-white/10" aria-label="فتح القائمة">
+        <button id="menu-btn" class="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer border border-white/10" aria-label="فتح القائمة">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
             <line x1="3" y1="6"  x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -117,12 +121,12 @@
     </div>
   </div>
   <nav class="container-custom flex flex-col gap-1 pt-6 pb-12">
-    <a href="index.html"      class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.home">الرئيسية</a>
-    <a href="about.html"     class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.about">من نحن</a>
-    <a href="menu.html"      class="text-primary-light text-lg font-bold py-3 border-b border-white/10" data-i18n="nav.menu">المنيو والأسعار</a>
-    <a href="branches.html"  class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.locations">فروعنا</a>
-    <a href="index.html#subscriptions" class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
-    <a href="index.html#partnerships"  class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.partnerships">الشراكات</a>
+    <a href="index.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.about">عن الشركة</a>
+    <a href="menu.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.menu">المنيو والأسعار</a>
+    <a href="branches.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.locations">فروعنا</a>
+    <a href="index.html#subscriptions" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
+    <a href="index.html#partnerships" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.partnerships">الشراكات المؤسسية</a>
 
     <!-- Mobile Language Toggle -->
     <div class="py-4 border-b border-white/10 flex items-center justify-between">
@@ -361,18 +365,124 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-[#0F1410] text-white py-10 border-t border-white/10">
-  <div class="container-custom flex flex-col sm:flex-row items-center justify-between gap-4">
-    <p class="text-gray-400 text-sm" data-i18n="footer.rights">© 2026 فت فور لس | Fit for Less. جميع الحقوق محفوظة.</p>
-    <a href="index.html" class="text-primary-light font-bold text-sm hover:underline" data-i18n="menuPage.backHome">العودة للصفحة الرئيسية</a>
+<!-- ============================================================
+     GLOBAL UNIFIED FOOTER
+     ============================================================ -->
+<footer style="background:#0F1410;" class="border-t border-white/10">
+  <div class="container-custom py-14 lg:py-18">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+
+      <!-- Brand & Mission Column -->
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-2 mb-4">
+          <a href="index.html" aria-label="Fit for Less">
+            <img src="assets/images/logo-white.png" alt="Fit for Less Logo" class="h-12 w-auto object-contain" />
+          </a>
+        </div>
+        <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 max-w-sm" data-i18n="footer.brandDesc">
+          شركة سعودية متخصصة في قطاع المطاعم والأغذية الصحية تأسست عام 2021. نبني تجربة غذائية تجمع المذاق الاستثنائي بالقيمة العالية.
+        </p>
+
+        <!-- Official Social Icons -->
+        <div>
+          <span class="text-xs text-white/50 font-bold uppercase tracking-wider block mb-3.5" data-i18n="footer.socialTitle">تابع حساباتنا الرسمية</span>
+          <div class="flex items-center gap-3">
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@fit4less.ksa" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="TikTok" title="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.42a6.34 6.34 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z"/>
+              </svg>
+            </a>
+            <!-- Snapchat -->
+            <a href="https://www.snapchat.com/@fit4less.ksa" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Snapchat" title="Snapchat">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.065 2c-3.784 0-5.748 2.657-5.748 5.275 0 1.053.407 2.052.88 2.884-.132.32-.472.484-.877.585-.436.109-.92.146-1.391.56-.37.327-.478.79-.276 1.189.261.515.864.833 1.838.97.106.377.062.887-.034 1.344-.131.625-.49 1.127-1.122 1.568-.456.319-.884.776-.714 1.378.183.649.923.957 2.296.957.51 0 1.118-.046 1.78-.135.617-.083 1.258-.236 1.902.327.702.613 1.15 1.078 1.466 1.078.315 0 .764-.465 1.465-1.078.645-.563 1.286-.41 1.903-.327.662.089 1.27.135 1.78.135 1.373 0 2.113-.308 2.296-.957.17-.602-.258-1.059-.714-1.378-.632-.441-.991-.943-1.122-1.568-.096-.457-.14-.967-.034-1.344.974-.137 1.577-.455 1.838-.97.202-.399.094-.862-.276-1.189-.471-.414-.955-.451-1.391-.56-.405-.101-.745-.265-.877-.585.473-.832.88-1.831.88-2.884C17.813 4.657 15.85 2 12.065 2z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/fit4less.ksa" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://x.com/Fit4less22" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Navigation Column -->
+      <div class="md:col-span-4">
+        <h4 class="text-white font-bold text-sm mb-4" data-i18n="footer.quickLinksTitle">أقسام الموقع</h4>
+        <div class="grid grid-cols-2 gap-y-2.5 gap-x-4">
+          <div><a href="index.html" class="footer-link text-sm" data-i18n="footer.navHome">الرئيسية</a></div>
+          <div><a href="about.html" class="footer-link text-sm" data-i18n="footer.navAbout">من نحن والرؤية</a></div>
+          <div><a href="index.html#business-model" class="footer-link text-sm" data-i18n="footer.navModel">نموذج الأعمال</a></div>
+          <div><a href="menu.html" class="footer-link text-sm" data-i18n="footer.navProducts">المنيو والأسعار</a></div>
+          <div><a href="index.html#quality" class="footer-link text-sm" data-i18n="footer.navQuality">معايير الجودة</a></div>
+          <div><a href="branches.html" class="footer-link text-sm" data-i18n="footer.navBranches">فروع الرياض والخريطة</a></div>
+          <div><a href="index.html#team" class="footer-link text-sm" data-i18n="footer.navTeam">فريق العمل والحوكمة</a></div>
+          <div><a href="index.html#partnerships" class="footer-link text-sm" data-i18n="footer.navPartnerships">الشراكات المؤسسية</a></div>
+        </div>
+      </div>
+
+      <!-- Contact & Official Channels Column -->
+      <div class="md:col-span-3">
+        <h4 class="text-white font-bold text-sm mb-4" data-i18n="footer.contactTitle">الاتصال والتواصل الرسمي</h4>
+        <ul class="space-y-3.5">
+          <li>
+            <a href="tel:0114516498" class="footer-link text-sm flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="font-bold text-white font-latin" data-i18n="footer.phoneLabel">الرقم الموحد: 0114516498</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/966114516498" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+              </svg>
+              <span data-i18n="footer.whatsappContact">واتساب خدمة العملاء والاشتراكات</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://fit4less.net" target="_blank" rel="noopener noreferrer" class="footer-link text-sm flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              fit4less.net
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8">
+      <p class="text-gray-400 text-sm font-medium" data-i18n="footer.rights">
+        © 2026 فت فور لس | Fit for Less. جميع الحقوق محفوظة.
+      </p>
+      <div class="flex items-center gap-4">
+        <a href="https://apps.apple.com/sa/app/id6469492605" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">App Store</a>
+        <span class="text-gray-700">·</span>
+        <a href="https://play.google.com/store/apps/details?id=com.foodtech.fit4less" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">Google Play</a>
+        <span class="text-gray-700">·</span>
+        <a href="https://linktr.ee/fit4less.ksa" target="_blank" rel="noopener noreferrer" class="footer-link text-xs">Linktree</a>
+      </div>
+    </div>
+
   </div>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a id="whatsapp-fab" href="https://wa.me/966114516498" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+<!-- Floating WhatsApp FAB -->
+<a id="whatsapp-fab" href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20Fit%20for%20Less%20%D9%88%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
   </svg>
+  <span class="whatsapp-tooltip" data-i18n="app.whatsappTooltip">تواصل مع خدمة العملاء</span>
 </a>
 
 <!-- Bilingual Scripts -->

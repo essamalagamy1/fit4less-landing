@@ -243,7 +243,8 @@ window.translations = {
       dish1Prot: "عجينة طبيعية مخمرة",
       dish2Title: "برجر مشوي صحي",
       dish2Prot: "42جم بروتين صافي",
-      orderNowMock: "اطلب الآن عبر التطبيق"
+      orderNowMock: "اطلب الآن عبر التطبيق",
+      whatsappTooltip: "تواصل مع خدمة العملاء"
     },
     faq: {
       badge: "الأسئلة الشائعة",
@@ -267,9 +268,9 @@ window.translations = {
       brandDesc: "شركة سعودية متخصصة في قطاع المطاعم والأغذية الصحية تأسست عام 2021. نبني تجربة غذائية تجمع المذاق الاستثنائي بالقيمة العالية.",
       quickLinksTitle: "أقسام الموقع",
       navHome: "الرئيسية",
-      navAbout: "من نحن والرؤية",
+      navAbout: "عن الشركة والرؤية",
       navModel: "نموذج الأعمال",
-      navProducts: "أبرز المنتجات",
+      navProducts: "المنيو والأسعار",
       navQuality: "معايير الجودة",
       navBranches: "فروع الرياض والخريطة",
       navTeam: "فريق العمل والحوكمة",
@@ -283,6 +284,8 @@ window.translations = {
 
     /* Subpages Translations: Menu, Branches, About */
     menuPage: {
+      metaTitle: "Official Menu & Pricing | Fit for Less Saudi Arabia",
+      metaTitle: "قائمة المنيو والأسعار | Fit for Less فت فور لس",
       badge: "دليل قائمة الطعام الرسمية",
       title: "قائمة فت فور لس الكاملة والاشتراكات",
       subtitle: "تصفح جميع أقسام المنيو والوجبات الطازجة والاشتراكات الشهرية مع أسعارها المعتمدة وقيمها الغذائية.",
@@ -325,6 +328,7 @@ window.translations = {
       orderNow: "اطلب أونلاين"
     },
     branchesPage: {
+      metaTitle: "دليل فروع الرياض والخريطة التفاعلية | Fit for Less فت فور لس",
       badge: "شبكة الفروع التشغيلية",
       title: "فروعنا في مدينة الرياض",
       subtitle: "نستقبلكم يومياً في فروعنا المجهزة في أهم أحياء العاصمة من الساعة 11:00 صباحاً وحتى 1:00 بعد منتصف الليل.",
@@ -333,6 +337,7 @@ window.translations = {
       backHome: "العودة للصفحة الرئيسية"
     },
     aboutPage: {
+      metaTitle: "عن فت فور لس | القيادة والحوكمة والرؤية | Fit for Less",
       badge: "الملف التعريفي والحوكمة",
       title: "شركة سعودية برؤية عالمية",
       subtitle: "منذ عام 2021، نقود تطور قطاع الأغذية الصحية بنموذج تشغيلي متكامل يجمع بين الطعم الاستثنائي والجاهزية المؤسسية.",
@@ -588,7 +593,8 @@ window.translations = {
       dish1Prot: "Natural slow dough",
       dish2Title: "Flame-Grilled Burger",
       dish2Prot: "42g pure protein",
-      orderNowMock: "Order Now via App"
+      orderNowMock: "Order Now via App",
+      whatsappTooltip: "Chat with Customer Service"
     },
     faq: {
       badge: "Frequently Asked Questions",
@@ -614,7 +620,7 @@ window.translations = {
       navHome: "Home",
       navAbout: "About Us & Vision",
       navModel: "Business Model",
-      navProducts: "Signature Products",
+      navProducts: "Menu & Pricing",
       navQuality: "Quality Standards",
       navBranches: "Riyadh Branches & Map",
       navTeam: "Leadership & Governance",
@@ -628,6 +634,8 @@ window.translations = {
 
     /* Subpages Translations: Menu, Branches, About */
     menuPage: {
+      metaTitle: "Official Menu & Pricing | Fit for Less Saudi Arabia",
+      metaTitle: "قائمة المنيو والأسعار | Fit for Less فت فور لس",
       badge: "Official Menu Directory",
       title: "Fit for Less Complete Menu & Plans",
       subtitle: "Browse all meal sections, fresh athlete specials, and monthly subscriptions with verified pricing and nutrition facts.",
@@ -670,6 +678,8 @@ window.translations = {
       orderNow: "Order Online"
     },
     branchesPage: {
+      metaTitle: "Riyadh Branches Directory & Live Map | Fit for Less",
+      metaTitle: "دليل فروع الرياض والخريطة التفاعلية | Fit for Less فت فور لس",
       badge: "Operational Branch Network",
       title: "Our Branches in Riyadh City",
       subtitle: "Welcoming you daily at our fully equipped branches across prime Riyadh districts from 11:00 AM to 1:00 AM.",
@@ -678,6 +688,8 @@ window.translations = {
       backHome: "Return to Home Page"
     },
     aboutPage: {
+      metaTitle: "About Fit for Less | Leadership, Governance & Vision",
+      metaTitle: "عن فت فور لس | القيادة والحوكمة والرؤية | Fit for Less",
       badge: "Corporate Profile & Governance",
       title: "A Saudi Company with a Global Vision",
       subtitle: "Since 2021, we have pioneered healthy dining in Saudi Arabia through an integrated operating ecosystem combining gourmet flavors with institutional readiness.",
