@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="عن شركة فت فور لس – شركة سعودية رائدة في قطاع الأغذية الصحية والمطاعم، تأسست عام 2021 برؤية تتجاوز الحدود." />
+  <title data-i18n="aboutPage.metaTitle">عن الشركة والحوكمة المؤسسية | فت فور لس Fit for Less</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" type="image/png" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css?v=3.1" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#49973F',
+              dark:    '#3A7832',
+              light:   '#5DB84E',
+              pale:    '#E8F5E6',
+            },
+            accent: { DEFAULT: '#F59E0B', dark: '#D97706' },
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            latin:  ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-arabic antialiased bg-gray-50 text-gray-900">
+
+<!-- ============================================================
+     NAVBAR WITH BILINGUAL SWITCHER
+     ============================================================ -->
+<header id="navbar" class="fixed top-0 right-0 left-0 z-50 bg-[#111111]/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+  <div class="container-custom">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="الصفحة الرئيسية فت فور لس">
+        <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-10 sm:h-12 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden xl:flex items-center gap-6">
+        <a href="index.html" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.home">الرئيسية</a>
+        <a href="about.html" class="text-primary-light font-bold text-sm" data-i18n="nav.about">من نحن</a>
+        <a href="menu.html" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.menu">قائمة الطعام</a>
+        <a href="branches.html" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.locations">فروعنا</a>
+        <a href="index.html#subscriptions" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
+        <a href="index.html#partnerships" class="text-white/85 hover:text-white text-sm font-semibold transition-colors" data-i18n="nav.partnerships">الشراكات المؤسسية</a>
+      </nav>
+
+      <!-- Action & Language Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle-btn" class="lang-btn" aria-label="Switch Language / تبديل اللغة" title="Switch Language / تبديل اللغة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="lang-label">English</span>
+        </button>
+
+        <a href="tel:0114516498" class="btn-secondary text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 hidden md:inline-flex" data-i18n="nav.callUs">
+          اتصل بنا
+        </a>
+        <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 shadow-lg shadow-primary/25" data-i18n="nav.orderNow">
+          اطلب الآن
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="menu-btn" class="xl:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer border border-white/10" aria-label="فتح القائمة">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6"  x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[1100] bg-[#111111]/98 backdrop-blur-2xl flex flex-col overflow-y-auto">
+  <div class="container-custom border-b border-white/10">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="الصفحة الرئيسية فت فور لس">
+        <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-10 sm:h-12 w-auto object-contain" />
+      </a>
+      <button id="menu-close" class="flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer border border-white/10" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav class="container-custom flex flex-col gap-1 pt-6 pb-12">
+    <a href="index.html"      class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html"     class="text-primary-light text-lg font-bold py-3 border-b border-white/10" data-i18n="nav.about">من نحن</a>
+    <a href="menu.html"      class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.menu">قائمة الطعام</a>
+    <a href="branches.html"  class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.locations">فروعنا</a>
+    <a href="index.html#subscriptions" class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.subscriptions">الاشتراكات</a>
+    <a href="index.html#partnerships"  class="text-white text-lg font-bold py-3 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.partnerships">الشراكات</a>
+
+    <!-- Mobile Language Toggle -->
+    <div class="py-4 border-b border-white/10 flex items-center justify-between">
+      <div class="flex items-center gap-3 text-white font-bold text-base">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-primary-light">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span data-i18n="nav.language">اللغة</span>
+      </div>
+      <button id="mobile-nav-lang-btn" class="lang-btn py-1.5 px-4 text-xs font-bold" aria-label="Switch Language / تبديل اللغة">
+        <span class="mobile-nav-lang-label">English</span>
+      </button>
+    </div>
+
+    <!-- Mobile CTA buttons -->
+    <div class="pt-6 flex flex-col gap-3">
+      <a href="https://fit4less.net/menu" target="_blank" rel="noopener noreferrer" class="btn-primary text-center text-base py-3.5 justify-center shadow-lg" data-i18n="nav.orderNow">
+        اطلب الآن أونلاين
+      </a>
+      <a href="tel:0114516498" class="btn-secondary text-center text-base py-3.5 justify-center" data-i18n="nav.callUs">
+        اتصل بنا (0114516498)
+      </a>
+    </div>
+  </nav>
+</div>
+
+<!-- Hero Section -->
+<section class="pt-28 pb-14 bg-gradient-to-b from-[#111812] to-[#1a2e18] text-white">
+  <div class="container-custom text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold mb-4" data-i18n="aboutPage.badge">
+      الملف التعريفي والحوكمة
+    </div>
+    <h1 class="text-3xl sm:text-5xl font-black mb-4" data-i18n="aboutPage.title">شركة سعودية برؤية عالمية</h1>
+    <p class="text-white/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" data-i18n="aboutPage.subtitle">
+      منذ عام 2021، نقود تطور قطاع الأغذية الصحية بنموذج تشغيلي متكامل يجمع بين الطعم الاستثنائي والجاهزية المؤسسية.
+    </p>
+  </div>
+</section>
+
+<!-- Main Corporate Story -->
+<main class="container-custom py-14">
+  
+  <!-- Narrative & Vision -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 items-center">
+    <div class="lg:col-span-7 space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="aboutPage.narrativeTitle">إعادة صياغة تجربة الأغذية الصحية</h2>
+      <p data-i18n="aboutPage.p1">تأسست شركة فت فور لس في المملكة العربية السعودية عام 2021، مدفوعة بطموح استراتيجي لتحويل مفهوم الطعام الصحي من مجرد التزام مقيد إلى تجربة طهي ممتعة ومستدامة.</p>
+      <p data-i18n="aboutPage.p2">خلال مسيرتنا، نجحنا في تطوير بنية تحتية متينة تضم مطابخ مركزية متطورة، وسلاسل إمداد مبردة يومياً، وفريق عمل مؤهل يتجاوز 350 موظفاً يخدمون مئات الآلاف من العملاء والمشتركين بدقة واحترافية.</p>
+      <p data-i18n="aboutPage.p3">نعمل وفق حوكمة مؤسسية دقيقة تضمن معايير الجودة والسلامة الغذائية، وتدعم توسعنا وفق نموذج امتياز وتشغيل عالي الكفاءة.</p>
+    </div>
+    <div class="lg:col-span-5 p-8 rounded-3xl bg-gradient-to-br from-[#111111] via-[#142315] to-[#1e3a1b] text-white space-y-6 shadow-2xl border border-primary/25">
+      <div>
+        <span class="text-primary-light font-bold text-xs uppercase tracking-wider block mb-1" data-i18n="about.visionTitle">الرؤية الاستراتيجية</span>
+        <h3 class="text-xl font-black text-white" data-i18n="about.visionTitle">ريادة دولية في الأغذية المتوازنة</h3>
+        <p class="text-white/80 text-sm mt-2 leading-relaxed" data-i18n="about.visionDesc">أن نكون العلامة السعودية الرائدة دولياً في صناعة الأغذية الصحية المتوازنة، ونموذج الامتياز التشغيلي القادر على المنافسة في الأسواق الإقليمية والعالمية.</p>
+      </div>
+      <div class="pt-6 border-t border-white/10">
+        <span class="text-primary-light font-bold text-xs uppercase tracking-wider block mb-1" data-i18n="about.missionTitle">الرسالة المؤسسية</span>
+        <h3 class="text-xl font-black text-white" data-i18n="about.missionTitle">تمكين المجتمع من أسلوب حياة صحي</h3>
+        <p class="text-white/80 text-sm mt-2 leading-relaxed" data-i18n="about.missionDesc">تقديم خيارات غذائية متنوعة تجمع بين الجودة والمذاق والتوازن الغذائي، من خلال تجربة متكاملة تلبي احتياجات العملاء وتواكب أنماط حياتهم.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate Governance Chart -->
+  <div class="mb-16">
+    <div class="text-center mb-12">
+      <span class="text-primary font-bold text-xs tracking-wider uppercase" data-i18n="aboutPage.govBadge">الهيكل الإداري والتشغيلي</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mt-2" data-i18n="aboutPage.govTitle">حوكمة رشيدة تقود التميز</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="luxury-card p-6 border-t-4 border-t-primary">
+        <span class="text-xs font-mono font-bold text-primary block mb-1">01 / OPERATIONS</span>
+        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="team.dept1">إدارة العمليات والمطابخ المركزية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p2Desc">بنية إنتاجية مجهزة بأحدث تقنيات الطهي والإمداد المبرد اليومي لضمان نضارة المكونات بنسبة 100%.</p>
+      </div>
+
+      <div class="luxury-card p-6 border-t-4 border-t-primary">
+        <span class="text-xs font-mono font-bold text-primary block mb-1">02 / SUPPLY CHAIN</span>
+        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="team.dept2">سلاسل الإمداد والخدمات اللوجستية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="quality.pillar4Desc">نقل وحفظ المكونات في درجات حرارة محكومة رقمياً لمنع أي فقدان في الجودة.</p>
+      </div>
+
+      <div class="luxury-card p-6 border-t-4 border-t-primary">
+        <span class="text-xs font-mono font-bold text-primary block mb-1">03 / QUALITY & R&D</span>
+        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="team.dept3">إدارة الجودة والتغذية والرقابة (QA)</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="quality.pillar2Desc">وزن دقيق لكل حصة بروتين وكربوهيدرات ودهون لضمان موثوقية النظام الغذائي.</p>
+      </div>
+
+      <div class="luxury-card p-6 border-t-4 border-t-primary">
+        <span class="text-xs font-mono font-bold text-primary block mb-1">04 / DIGITAL PLATFORMS</span>
+        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="team.dept4">إدارة التسويق والتطبيقات الرقمية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="businessModel.p4Desc">تطبيقات هواتف ذكية وموقع إلكتروني يتيح للعميل تخصيص وجباته ومتابعة نظامه وسعراته بضغطة زر.</p>
+      </div>
+
+      <div class="luxury-card p-6 border-t-4 border-t-primary">
+        <span class="text-xs font-mono font-bold text-primary block mb-1">05 / HUMAN RESOURCES</span>
+        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="team.dept5">إدارة الموارد البشرية والتدريب الفندقي</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v6Desc">بناء بيئة عمل محفزة تمكن كفاءاتنا الوطنية والمهنية من قيادة التوسع المؤسسي بثقة.</p>
+      </div>
+
+      <div class="luxury-card p-6 border-t-4 border-t-primary">
+        <span class="text-xs font-mono font-bold text-primary block mb-1">06 / FINANCE & GOVERNANCE</span>
+        <h3 class="text-lg font-bold text-gray-900 mb-2" data-i18n="team.dept6">الإدارة المالية والرقابة المحاسبية</h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="about.v4Desc">منظومة تشغيل متطورة تضمن نفس الطعم ومعايير الخدمة في كافة الفروع دون تفاوت.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate Contact & Partnerships CTA -->
+  <div class="p-8 sm:p-12 rounded-3xl bg-primary text-white text-center flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+    <div class="text-start">
+      <h3 class="text-2xl font-black mb-2" data-i18n="aboutPage.partnerCTATitle">ترغب في عقد شراكة تجارية أو استفسار مؤسسي؟</h3>
+      <p class="text-white/85 text-sm sm:text-base" data-i18n="aboutPage.partnerCTASub">فريق العلاقات المؤسسية والاستثمار جاهز للتواصل ومناقشة الفرص.</p>
+    </div>
+    <a href="https://wa.me/966114516498?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%86%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A8%D8%AD%D8%AB%20%D9%81%D8%B1%D8%B5%D8%A9%20%D8%B4%D8%B1%D8%A7%D9%83%D8%A9%20%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%AA%20%D9%81%D9%88%D8%B1%20%D9%84%D8%B3" target="_blank" rel="noopener noreferrer" class="btn-secondary bg-white text-gray-900 hover:bg-gray-100 border-0 flex-shrink-0 font-bold px-8 py-3.5 shadow-md" data-i18n="aboutPage.partnerCTABtn">
+      تواصل مع إدارة الشراكات
+    </a>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#0F1410] text-white py-10 border-t border-white/10">
+  <div class="container-custom flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-gray-400 text-sm" data-i18n="footer.rights">© 2026 فت فور لس | Fit for Less. جميع الحقوق محفوظة.</p>
+    <a href="index.html" class="text-primary-light font-bold text-sm hover:underline" data-i18n="aboutPage.backHome">العودة للصفحة الرئيسية</a>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a id="whatsapp-fab" href="https://wa.me/966114516498" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Bilingual Scripts -->
+<script src="assets/js/translations.js?v=3.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11/dist/motion.min.js"></script>
+<script src="assets/js/main.js?v=3.1"></script>
+
+</body>
+</html>

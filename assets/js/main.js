@@ -2,6 +2,7 @@
    Fit4Less Landing Page – main.js
    - Bilingual i18n Engine (AR / EN) with RTL/LTR & Font switching
    - Motion.dev Animations (Hero entrance, inView reveal, Counters)
+   - Interactive Branch Explorer & Dynamic Map Pan
    - Mobile Menu & Navbar scroll states
    - Smooth anchor navigation & FAQ Accordion
    ============================================================ */
@@ -88,7 +89,10 @@
     const mobileNavLangBtn = document.getElementById('mobile-nav-lang-btn');
     if (mobileNavLangBtn) mobileNavLangBtn.setAttribute('aria-label', ariaLabel);
 
-    // 5. Persist preference
+    // 5. Update Interactive Branch Explorer if rendered
+    updateBranchDisplay(currentBranchIndex);
+
+    // 6. Persist preference
     if (persist) {
       try {
         localStorage.setItem('fit4less_lang', lang);
@@ -101,18 +105,21 @@
   }
 
   function toggleLanguage() {
-    const next = currentLang === 'ar' ? 'en' : 'ar';
-    setLanguage(next, true);
+    const targetLang = currentLang === 'ar' ? 'en' : 'ar';
+    setLanguage(targetLang, true);
   }
 
-  // Bind Buttons
-  const desktopLangBtn = document.getElementById('lang-toggle-btn');
-  if (desktopLangBtn) desktopLangBtn.addEventListener('click', toggleLanguage);
+  // Bind desktop & mobile toggle buttons
+  const desktopToggleBtn = document.getElementById('lang-toggle-btn');
+  if (desktopToggleBtn) {
+    desktopToggleBtn.addEventListener('click', toggleLanguage);
+  }
+  const mobileToggleBtn = document.getElementById('mobile-nav-lang-btn');
+  if (mobileToggleBtn) {
+    mobileToggleBtn.addEventListener('click', toggleLanguage);
+  }
 
-  const mobileNavLangBtn = document.getElementById('mobile-nav-lang-btn');
-  if (mobileNavLangBtn) mobileNavLangBtn.addEventListener('click', toggleLanguage);
-
-  // Initialize Language
+  // Initialize language on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => setLanguage(currentLang, false));
   } else {
@@ -121,10 +128,13 @@
 
 
   /* ============================================================
-     2. NAVBAR: SCROLL SHADOW & ACTIVE LINK
+     2. NAVBAR SCROLL & ACTIVE SECTION HIGHLIGHT
      ============================================================ */
   const navbar = document.getElementById('navbar');
-  function handleNavScroll() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  function handleNavbarScroll() {
     if (!navbar) return;
     if (window.scrollY > 20) {
       navbar.classList.add('scrolled');
@@ -132,21 +142,24 @@
       navbar.classList.remove('scrolled');
     }
   }
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
+  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+  handleNavbarScroll();
 
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link[data-section]');
   function highlightNav() {
-    if (!navbar) return;
-    const scrollY = window.scrollY + navbar.offsetHeight + 40;
-    sections.forEach((section) => {
-      const top = section.offsetTop;
-      const bottom = top + section.offsetHeight;
-      if (scrollY >= top && scrollY < bottom) {
+    const scrollPos = window.scrollY + 120;
+    sections.forEach((sec) => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
         navLinks.forEach((link) => {
-          link.classList.toggle('text-primary-light', link.dataset.section === section.id);
-          link.classList.toggle('font-bold', link.dataset.section === section.id);
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('text-primary-light');
+            link.classList.remove('text-white/80');
+          } else {
+            link.classList.remove('text-primary-light');
+            link.classList.add('text-white/80');
+          }
         });
       }
     });
@@ -197,7 +210,7 @@
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1024 && mobileMenu && mobileMenu.classList.contains('visible')) {
+    if (window.innerWidth >= 1280 && mobileMenu && mobileMenu.classList.contains('visible')) {
       closeMenu();
     }
   });
@@ -235,18 +248,137 @@
 
 
   /* ============================================================
-     6. BACK TO TOP (Safe Null Check)
+     6. INTERACTIVE BRANCH EXPLORER & MAP
      ============================================================ */
-  const backBtn = document.getElementById('back-to-top');
-  if (backBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backBtn.classList.add('visible');
+  const branchesData = [
+    {
+      id: 'naseem',
+      nameAr: 'فرع النسيم الشرقي',
+      nameEn: 'Al-Naseem Al-Sharqi Branch',
+      descAr: 'شارع حسان بن ثابت، بجوار وقت اللياقة',
+      descEn: 'Hassan Bin Thabit St., Next to Fitness Time',
+      lat: 24.7214,
+      lng: 46.8322,
+      phone: '0114516498',
+      mapUrl: 'https://maps.google.com?q=فت+فور+لس+النسيم+الشرقي+الرياض',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.8122%2C24.7014%2C46.8522%2C24.7414&layer=mapnik&marker=24.7214%2C46.8322'
+    },
+    {
+      id: 'nadwa',
+      nameAr: 'فرع حي الندوة',
+      nameEn: 'Al-Nadwa District Branch',
+      descAr: 'طريق خريص، بجوار وقت اللياقة',
+      descEn: 'Khurais Road, Next to Fitness Time',
+      lat: 24.7876,
+      lng: 46.8831,
+      phone: '0114516498',
+      mapUrl: 'https://maps.google.com?q=فت+فور+لس+حي+الندوة+الرياض',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.8631%2C24.7676%2C46.9031%2C24.8076&layer=mapnik&marker=24.7876%2C46.8831'
+    },
+    {
+      id: 'hamra',
+      nameAr: 'فرع الحمراء',
+      nameEn: 'Al-Hamra Branch',
+      descAr: 'شارع خالد بن الوليد، بجوار بيور جيم',
+      descEn: 'Khalid Bin Al-Waleed St., Next to PureGym',
+      lat: 24.7794,
+      lng: 46.7562,
+      phone: '0114516498',
+      mapUrl: 'https://maps.google.com?q=فت+فور+لس+الحمراء+الرياض',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7362%2C24.7594%2C46.7762%2C24.7994&layer=mapnik&marker=24.7794%2C46.7562'
+    },
+    {
+      id: 'qadisiyyah',
+      nameAr: 'فرع القادسية',
+      nameEn: 'Al-Qadisiyyah Branch',
+      descAr: 'الطريق الدائري الشمالي، بجانب الصالة الاقتصادية',
+      descEn: 'Northern Ring Road, Next to Economic Hall',
+      lat: 24.8142,
+      lng: 46.8123,
+      phone: '0114516498',
+      mapUrl: 'https://maps.google.com?q=فت+فور+لس+القادسية+الرياض',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7923%2C24.7942%2C46.8323%2C24.8342&layer=mapnik&marker=24.8142%2C46.8123'
+    },
+    {
+      id: 'qurtubah',
+      nameAr: 'فرع قرطبة',
+      nameEn: 'Qurtubah Branch',
+      descAr: 'طريق الثمامة، بالقرب من المجمعات الحيوية',
+      descEn: 'Al-Thumamah Road, Near Vibrant Plazas',
+      lat: 24.8135,
+      lng: 46.7328,
+      phone: '0114516498',
+      mapUrl: 'https://maps.google.com?q=فت+فور+لس+قرطبة+الرياض',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7128%2C24.7935%2C46.7528%2C24.8335&layer=mapnik&marker=24.8135%2C46.7328'
+    },
+    {
+      id: 'maseef',
+      nameAr: 'فرع المصيف',
+      nameEn: 'Al-Maseef Branch',
+      descAr: 'طريق الدائري الشمالي الفرعي، مخرج 6',
+      descEn: 'Northern Ring Branch Road, Exit 6',
+      lat: 24.7661,
+      lng: 46.6853,
+      phone: '0114516498',
+      mapUrl: 'https://share.google/neW6tM67Ts3KxFZBN',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.6653%2C24.7461%2C46.7053%2C24.7861&layer=mapnik&marker=24.7661%2C46.6853'
+    },
+    {
+      id: 'rayan',
+      nameAr: 'فرع الريان',
+      nameEn: 'Al-Rayan Branch',
+      descAr: 'شارع الإمام الشافعي، حي الريان',
+      descEn: 'Al-Imam Al-Shafi\'i St., Al-Rayan District',
+      lat: 24.7153,
+      lng: 46.7791,
+      phone: '0114516498',
+      mapUrl: 'https://maps.app.goo.gl/J1G3bMkA7Qv3gsLn6',
+      embedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=46.7591%2C24.6953%2C46.7991%2C24.7353&layer=mapnik&marker=24.7153%2C46.7791'
+    }
+  ];
+
+  let currentBranchIndex = 0;
+
+  function updateBranchDisplay(index) {
+    if (index < 0 || index >= branchesData.length) index = 0;
+    currentBranchIndex = index;
+    const branch = branchesData[index];
+    const isAr = currentLang === 'ar';
+
+    // Highlight active pill
+    document.querySelectorAll('.branch-pill').forEach((pill, i) => {
+      if (i === index) {
+        pill.classList.add('active');
       } else {
-        backBtn.classList.remove('visible');
+        pill.classList.remove('active');
       }
-    }, { passive: true });
+    });
+
+    // Update details card elements (supports both index.html and branches.html)
+    const nameEl = document.getElementById('active-branch-name') || document.getElementById('current-name');
+    const descEl = document.getElementById('active-branch-desc') || document.getElementById('current-desc');
+    const dirBtn = document.getElementById('active-branch-dir') || document.getElementById('current-directions');
+    const callBtn = document.getElementById('active-branch-call') || document.getElementById('current-call');
+    const mapIframe = document.getElementById('active-branch-map-iframe') || document.getElementById('branch-map-frame');
+
+    if (nameEl) nameEl.textContent = isAr ? branch.nameAr : branch.nameEn;
+    if (descEl) descEl.textContent = isAr ? branch.descAr : branch.descEn;
+    if (dirBtn) dirBtn.setAttribute('href', branch.mapUrl);
+    if (callBtn) callBtn.setAttribute('href', `tel:${branch.phone}`);
+    if (mapIframe && mapIframe.src !== branch.embedUrl) {
+      mapIframe.src = branch.embedUrl;
+    }
   }
+
+  // Bind branch pill clicks
+  document.querySelectorAll('.branch-pill').forEach((pill, idx) => {
+    pill.addEventListener('click', () => {
+      updateBranchDisplay(idx);
+    });
+  });
+
+  // Initial trigger
+  updateBranchDisplay(0);
 
 
   /* ============================================================
@@ -256,22 +388,20 @@
     const suffix = el.getAttribute('data-suffix') || '';
     const prefix = el.getAttribute('data-prefix') || '';
     const startTime = performance.now();
-    let frameId;
 
     function update(now) {
       const elapsed = now - startTime;
       const progress = Math.min(1, elapsed / duration);
-      // easeOutCubic
       const ease = 1 - Math.pow(1 - progress, 3);
       const current = Math.floor(ease * target);
       el.textContent = `${prefix}${current}${suffix}`;
       if (progress < 1) {
-        frameId = requestAnimationFrame(update);
+        requestAnimationFrame(update);
       } else {
         el.textContent = `${prefix}${target}${suffix}`;
       }
     }
-    frameId = requestAnimationFrame(update);
+    requestAnimationFrame(update);
   }
 
   const motionLib = (typeof window.Motion !== 'undefined') ? window.Motion : (typeof window.motion !== 'undefined' ? window.motion : null);
@@ -279,16 +409,16 @@
   if (!prefersReducedMotion && motionLib && motionLib.animate && motionLib.inView) {
     const { animate, inView } = motionLib;
 
-    // Hero elements entrance
+    // Hero entrance
     const heroEls = document.querySelectorAll('[data-hero-animate]');
     heroEls.forEach((el, i) => {
       animate(el,
-        { opacity: [0, 1], y: [26, 0] },
-        { duration: 0.55, delay: 0.12 + i * 0.08, easing: [0.25, 0.46, 0.45, 0.94] }
+        { opacity: [0, 1], y: [24, 0] },
+        { duration: 0.55, delay: 0.1 + i * 0.08, easing: [0.25, 0.46, 0.45, 0.94] }
       );
     });
 
-    // Generic scroll reveals
+    // Generic reveals
     document.querySelectorAll('[data-animate]').forEach((el) => {
       const delay = parseFloat(el.dataset.delay || 0);
       inView(el, () => {
@@ -297,7 +427,7 @@
           { duration: 0.5, delay, easing: [0.25, 0.46, 0.45, 0.94] }
         );
         return false;
-      }, { margin: '-50px' });
+      }, { margin: '-40px' });
     });
 
     // Stagger parents
@@ -307,15 +437,15 @@
       inView(parent, () => {
         children.forEach((child, i) => {
           animate(child,
-            { opacity: [0, 1], y: [24, 0] },
+            { opacity: [0, 1], y: [22, 0] },
             { duration: 0.45, delay: i * staggerDelay, easing: [0.25, 0.46, 0.45, 0.94] }
           );
         });
         return false;
-      }, { margin: '-40px' });
+      }, { margin: '-30px' });
     });
 
-    // Scale-in for subscription cards
+    // Scale-in
     document.querySelectorAll('[data-scale-in]').forEach((el, i) => {
       inView(el, () => {
         animate(el,
@@ -323,10 +453,10 @@
           { duration: 0.45, delay: i * 0.1, easing: [0.34, 1.56, 0.64, 1] }
         );
         return false;
-      }, { margin: '-40px' });
+      }, { margin: '-30px' });
     });
 
-    // Number Counters with inView
+    // Number counters
     document.querySelectorAll('[data-counter]').forEach((el) => {
       const target = parseFloat(el.getAttribute('data-counter'));
       if (isNaN(target)) return;
@@ -337,7 +467,6 @@
     });
 
   } else if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    // Native IntersectionObserver Fallback
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -349,7 +478,6 @@
             const target = parseFloat(el.getAttribute('data-counter'));
             if (!isNaN(target)) animateCounter(el, target, 1400);
           }
-
           obs.unobserve(el);
         }
       });
@@ -366,9 +494,7 @@
         observer.observe(el);
       }
     });
-
   } else {
-    // Reduced motion
     document.querySelectorAll('[data-animate], [data-hero-animate], [data-stagger-child], [data-scale-in]').forEach((el) => {
       el.style.opacity = '1';
       el.style.transform = 'none';
