@@ -435,6 +435,7 @@
   function animateCounter(el, target, duration = 1500) {
     const suffix = el.getAttribute('data-suffix') || '';
     const prefix = el.getAttribute('data-prefix') || '';
+    const formatComma = el.hasAttribute('data-format-comma') || target >= 10000;
     const startTime = performance.now();
 
     function update(now) {
@@ -442,11 +443,13 @@
       const progress = Math.min(1, elapsed / duration);
       const ease = 1 - Math.pow(1 - progress, 3);
       const current = Math.floor(ease * target);
-      el.textContent = `${prefix}${current}${suffix}`;
+      const formatted = formatComma ? current.toLocaleString('en-US') : current;
+      el.textContent = `${prefix}${formatted}${suffix}`;
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        el.textContent = `${prefix}${target}${suffix}`;
+        const finalFormatted = formatComma ? target.toLocaleString('en-US') : target;
+        el.textContent = `${prefix}${finalFormatted}${suffix}`;
       }
     }
     requestAnimationFrame(update);
