@@ -1162,7 +1162,8 @@ html[dir="ltr"] #whatsapp-fab {
 .wa-label-tooltip {
   display: none !important;
   position: absolute !important;
-  inset-inline-start: 68px !important;
+  left: 68px !important;
+  right: auto !important;
   white-space: nowrap !important;
   background: rgba(17, 17, 17, 0.95) !important;
   color: #FFFFFF !important;
@@ -1173,16 +1174,16 @@ html[dir="ltr"] #whatsapp-fab {
   box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
   pointer-events: none !important;
   opacity: 0 !important;
-  transform: translateX(-8px) !important;
+  transform: translateX(8px) !important;
   transition: opacity 0.2s ease, transform 0.2s ease !important;
   border: 1px solid rgba(255,255,255,0.15) !important;
   line-height: 1.5 !important;
 }
 [dir="ltr"] .wa-label-tooltip,
 html[dir="ltr"] .wa-label-tooltip {
-  inset-inline-start: auto !important;
-  inset-inline-end: 68px !important;
-  transform: translateX(8px) !important;
+  left: auto !important;
+  right: 68px !important;
+  transform: translateX(-8px) !important;
 }
 #whatsapp-fab:hover .wa-label-tooltip {
   display: block !important;
