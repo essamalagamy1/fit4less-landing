@@ -87,8 +87,15 @@ body {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
 }
 .nav-link {
+  color: rgba(255, 255, 255, 0.85);
   position: relative;
   transition: color var(--transition-fast);
+}
+.nav-link:hover {
+  color: #FFFFFF;
+}
+.nav-link.text-primary-light {
+  color: var(--color-primary-light) !important;
 }
 .nav-link::after {
   content: '';
@@ -101,7 +108,6 @@ body {
   transition: width var(--transition-normal);
 }
 .nav-link:hover::after { width: 100%; }
-.nav-link:hover { color: var(--color-primary); }
 
 /* ---- Mobile Menu Overlay ---- */
 #mobile-menu {

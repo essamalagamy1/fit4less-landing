@@ -151,41 +151,61 @@
     const currentFile = (rawPath === '' || rawPath === '/') ? 'index.html' : rawPath;
     const isIndexPage = currentFile === 'index.html';
 
-    // 1. Highlight dedicated page links
-    [...navLinks, ...mobileNavLinks].forEach((link) => {
-      const href = link.getAttribute('href');
-      if (!href) return;
-      const filePart = href.split('#')[0].split('?')[0];
-
-      if (!isIndexPage && filePart === currentFile && !href.includes('#')) {
-        link.classList.add('text-primary-light', 'font-bold');
-        link.classList.remove('text-white/85');
-      } else if (isIndexPage && !href.includes('#') && (filePart === 'index.html' || filePart === '')) {
-        link.classList.add('text-primary-light', 'font-bold');
-        link.classList.remove('text-white/85');
-      } else {
-        link.classList.remove('text-primary-light');
-        if (!link.classList.contains('font-bold')) {
-          link.classList.add('text-white/85');
-        }
-      }
+    // 1. Reset all desktop nav links to default white
+    navLinks.forEach((link) => {
+      link.classList.remove('text-primary-light', 'font-bold');
+      link.classList.add('text-white/85');
     });
 
-    // 2. On index page, highlight in-view hash sections
+    mobileNavLinks.forEach((link) => {
+      link.classList.remove('text-primary-light');
+    });
+
+    // 2. Determine active link
     if (isIndexPage) {
-      const scrollPos = window.scrollY + 140;
+      const scrollPos = window.scrollY + 160;
+      let activeSectionId = null;
+
       sections.forEach((sec) => {
         const top = sec.offsetTop;
         const height = sec.offsetHeight;
         const id = sec.getAttribute('id');
         if (id && scrollPos >= top && scrollPos < top + height) {
-          navLinks.forEach((link) => {
-            const href = link.getAttribute('href');
-            if (href === `#${id}` || href === `index.html#${id}`) {
-              navLinks.forEach((l) => l.classList.remove('text-primary-light'));
-              link.classList.add('text-primary-light');
-            }
-          });
+          activeSectionId = id;
+        }
+      });
+
+      let matchedHashLink = false;
+      if (activeSectionId && window.scrollY >= 300) {
+        navLinks.forEach((link) => {
+          const href = link.getAttribute('href') || '';
+          if (href === `#${activeSectionId}` || href === `index.html#${activeSectionId}`) {
+            link.classList.add('text-primary-light');
+            link.classList.remove('text-white/85');
+            matchedHashLink = true;
+          }
+        });
+      }
+
+      // If at top or no hash section matched, highlight "الرئيسية"
+      if (!matchedHashLink) {
+        navLinks.forEach((link) => {
+          const href = link.getAttribute('href') || '';
+          const filePart = href.split('#')[0].split('?')[0];
+          if (!href.includes('#') && (filePart === 'index.html' || filePart === '')) {
+            link.classList.add('text-primary-light');
+            link.classList.remove('text-white/85');
+          }
+        });
+      }
+    } else {
+      // On subpages (about.html, menu.html, branches.html, terms.html)
+      navLinks.forEach((link) => {
+        const href = link.getAttribute('href') || '';
+        const filePart = href.split('#')[0].split('?')[0];
+        if (filePart === currentFile && !href.includes('#')) {
+          link.classList.add('text-primary-light', 'font-bold');
+          link.classList.remove('text-white/85');
         }
       });
     }
