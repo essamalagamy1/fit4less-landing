@@ -1,0 +1,14 @@
+# Credentials & Secrets
+.env
+.env.*
+*.pem
+*.key
+assets/menu/*.json
+*service-account*.json
+*altasneef*
+
+# System & Editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
