@@ -103,22 +103,30 @@ body {
 .nav-link:hover::after { width: 100%; }
 .nav-link:hover { color: var(--color-primary); }
 
-/* ---- Mobile Menu ---- */
+/* ---- Mobile Menu Overlay ---- */
 #mobile-menu {
-  z-index: 1100;
-  transition: opacity var(--transition-normal), transform var(--transition-normal);
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  background-color: #0d140e !important;
+  background: linear-gradient(180deg, #0b110c 0%, #121a13 50%, #0d140e 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 #mobile-menu.hidden {
   display: none !important;
-  opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
+  opacity: 0 !important;
+  transform: translateY(-8px) !important;
+  pointer-events: none !important;
 }
 #mobile-menu.visible {
   display: flex !important;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 
 /* =============================================
@@ -643,7 +651,7 @@ body {
    ============================================= */
 .container-custom {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -858,6 +866,13 @@ body.font-arabic {
 
 /* ---- Mobile Menu Open Fix ---- */
 body.menu-open #navbar {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+body.menu-open #whatsapp-fab {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;

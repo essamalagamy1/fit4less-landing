@@ -19,7 +19,7 @@
   <link rel="apple-touch-icon" href="assets/images/logo.png" type="image/png" />
   
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css?v=4.0" />
+  <link rel="stylesheet" href="assets/css/custom.css?v=4.1" />
 
   <script>
     tailwind.config = {
@@ -122,9 +122,22 @@
   </div>
 </header>
 
-<!-- Mobile Navigation Overlay -->
-<div id="mobile-menu" class="fixed inset-0 z-[999] bg-gray-950/95 backdrop-blur-xl hidden flex-col justify-between p-6 sm:p-8 pt-28">
-  <nav class="flex flex-col gap-2">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[99999] flex flex-col overflow-y-auto">
+  <div class="container-custom border-b border-white/10">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="الصفحة الرئيسية فت فور لس">
+        <img src="assets/images/logo-white.png" alt="Fit4Less Logo" class="h-10 sm:h-12 w-auto object-contain" />
+      </a>
+      <button id="menu-close" class="flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 transition-colors cursor-pointer border border-white/10" aria-label="إغلاق القائمة">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav class="container-custom flex flex-col gap-1 pt-6 pb-12">
     <a href="index.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.home">الرئيسية</a>
     <a href="about.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.about">عن الشركة</a>
     <a href="menu.html" class="text-white text-lg font-bold py-3.5 border-b border-white/10 hover:text-primary-light transition-colors" data-i18n="nav.menu">المنيو والأسعار</a>
